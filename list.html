@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>酷狗音乐</title>
+<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+<!--主界面-->
+	<div id="header">
+		<a href="index.html"><div class="home"></div></a>
+		<h4>喜欢·歌单</h4>
+		<a href=""><div class="shuaxin"></div></a>
+	</div>
+	<div id="list">
+		<span class="on">单曲<font style="font-size: 10px; margin-left: 3px;">/ 0</font></span>
+		<span>歌单<font style="font-size: 10px; margin-left: 3px;">/ 2</font></span>
+		<span>歌手<font style="font-size: 10px; margin-left: 3px;">/ 0</font></span>
+		<span>视频<font style="font-size: 10px; margin-left: 3px;">/ 0</font></span>
+	</div>
+	<ul class="on">
+        <div class="single">
+            <img src="images/null.png">
+            <p>还没有添加喜欢的单曲</p> 
+        </div> 
+    </ul>
+	<ul>
+        <div class="list">
+            <div class="top">
+                <div class="fl">
+                    <a href=""><li>
+                        <img src="icon/ad.png">
+                        <h4>新建</h4>
+                    </li></a>
+                    <a href=""><li>
+                        <img src="icon/pc.png">
+                        <h4>PC列表</h4>
+                    </li></a>
+                </div>
+                <div class="fr">云歌曲数：0/2000</div>
+            </div>
+            <div class="bottom">
+                <ol class="list-1">
+                    <a href="">
+                        <div class="fl pic">
+                            <img src="images/like.jpg" class="pic">
+                        </div>
+                        <div class="fr word">
+                            <span>我喜欢</span>
+                            <h5>0首</h5>
+                            <img src="icon/more.png" class="more">
+                        </div>
+                    </a>
+                </ol>
+                <ol class="list-2">
+                    <a href="">
+                        <div class="fl pic">
+                            <img src="images/collect.jpg" class="pic">
+                        </div>
+                        <div class="fr word">
+                            <span>默认收藏</span>
+                            <h5>0首</h5>
+                            <img src="icon/more.png" class="more">
+                        </div>
+                    </a>
+                </ol>
+            </div>
+        </div>   
+    </ul>
+	<ul>
+        <div class="singer">
+            <img src="images/null.png">
+            <p>点击“关注”可添加喜欢的歌手</p> 
+            <a href=""><h4>去乐库看看</h4></a>
+        </div>    
+    </ul>
+	<ul>
+        <div class="video">
+            <img src="images/null.png">
+            <p>点击“喜欢”可添加喜欢的视频到这里</p> 
+            <a href=""><h4>更多精彩视频</h4></a>
+        </div>  
+    </ul>
+
+<!--播放-->
+	<footer>
+		<div class="pic">
+			<img src="images/1_42.jpg">
+		</div>
+		<div class="info">
+			<div class="next"></div>
+			<div class="list"></div>
+			<div class="title">
+				<marquee behavior="scroll" direction="left">Rolling in the deep</marquee>
+			</div>
+			<div class="name">Adele</div>
+			<audio src="video/Adele - Rolling in the Deep.mp3" id="audio"></audio>
+			<div id="musicAudio">
+			    <img id="music_wrapper" onclick="playOrPaused(this)" src="icon/play.png">
+				<div id="progressBar">
+					<div id="progress"></div>
+				</div>
+				<p id="musicAudioTime"><span id="currentTime">00:00</span><span>&#47;</span><span id="totalTime">12:00</span></p>
+			</div>
+		</div>
+	</footer>
+<!--音乐播放进度-->
+    <script>
+    	var audio ;
+    window.onload = function(){
+        initAudio();
+    }
+    var initAudio = function(){
+        //初始化页面
+        document.getElementById("musicAudio").innerHTML=
+        "<img id='music_wrapper' onclick='playOrPaused(this)' src='icon/play.png'>"+
+        "<div id='progressBar'>"+
+        "<div id='progress'></div>"+
+        "</div>"+
+        "<p id='musicAudioTime'><span id='currentTime'>00:00</span><span>&#47;</span><span id='totalTime'>12:00</span></p>";
+        //初始化对象
+        audio = document.getElementById('audio');
+        //初始化  当前时间
+        getCurrentTime();
+        //初始化  总时间
+        var totalTime=parseInt(audio.duration/60);
+        var seconds=parseInt(audio.duration%60);
+        if(totalTime==0){
+            if(seconds>9){
+                totalTime="00:"+seconds;
+            }else{
+                totalTime="00:0"+seconds;
+            }
+        }else{
+            var totalTimePre,totalTimeNext;
+            if(totalTime>9){
+                totalTimePre=totalTime;
+            }else{
+                totalTimePre="0"+totalTime;
+            }
+            if(seconds>9){
+                totalTimeNext=seconds;
+            }else{
+                totalTimeNext="0"+seconds;
+            }
+            totalTime=totalTimePre+":"+totalTimeNext;
+        }
+        document.getElementById("totalTime").innerText=totalTime;
+    }
+    //更新进度条当前值
+    function updateProgressVal(){
+        var progressVal=audio.currentTime/audio.duration*220;
+        document.getElementById("progress").style.width=progressVal+"px";
+    }
+    //更新当前时间
+    function getCurrentTime(){
+        var currentTime=audio.currentTime;
+        var totalTime=parseInt(currentTime/60);
+        var seconds=parseInt(currentTime%60);
+        if(totalTime==0){
+            if(seconds>9){
+                totalTime="00:"+seconds;
+            }else{
+                totalTime="00:0"+seconds;
+            }
+        }else{
+            var totalTimePre,totalTimeNext;
+            if(totalTime>9){
+                totalTimePre=totalTime;
+            }else{
+                totalTimePre="0"+totalTime;
+            }
+            if(seconds>9){
+                totalTimeNext=seconds;
+            }else{
+                totalTimeNext="0"+seconds;
+            }
+            totalTime=totalTimePre+":"+totalTimeNext;
+        }
+        document.getElementById("currentTime").innerText=totalTime;
+    }
+    //暂停或播放
+    var progressTimer;
+    function playOrPaused(obj){
+        if(audio.paused){
+            audio.play();
+            progressTimer=window.setInterval(audioProgress,100);
+            document.getElementById("music_wrapper").setAttribute("src","icon/stop.png");
+            return;
+        }
+        audio.pause();
+        document.getElementById("music_wrapper").setAttribute("src","icon/play.png")
+    }
+
+    function audioProgress(){
+        if(audio.currentTime <audio.duration){
+            if(audio.played){
+                //更新当前时间
+                getCurrentTime();
+                //更新进度条
+                updateProgressVal();
+            }
+        }else{
+            clearInterval(progressTimer);
+        }
+    }
+
+    </script>
+<!--本地音乐：tab选项卡-->
+	<script>
+		var oList=document.getElementById("list");
+		var oS=oList.getElementsByTagName("span");
+		var oUl=document.getElementsByTagName("ul");
+		var n=oS.length;
+
+		for(var i=0;i<n;i++){//扫描用户操作
+			oS[i].index=i;
+			oS[i].onclick=function(){
+				for(var j=0;j<n;j++){//关所有
+					oS[j].className="";
+					oUl[j].className="";
+				}
+				console.log(this.index);
+				this.className="on";//开一个
+				oUl[this.index].className="on";
+				//this.index---实现了分类标题oS与oUl
+			}
+		}
+	</script>
+</body>
+</html>

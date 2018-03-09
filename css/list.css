@@ -1,0 +1,428 @@
+html {
+  height: 100%;
+}
+body {
+  font: normal 14px/1.5 Arial, Helvetica, "Microsoft YaHei", STHeiti, "Droid Sans Fallback", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  height: 100%;
+  background: url(../images/bg1.jpg) fixed no-repeat center center;
+  overflow: hidden;
+  z-index: -999;
+}
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /*苹果手持设备的浏览器属性，意思是：点击它，它就会出现一个半透明的灰色背景。webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节。 */
+}
+ h1,h2,h3,h4,h5,h6 {
+  font-weight: 100;
+} 
+ol{
+	list-style: none;
+}
+#header{
+  width: 100%;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+#header .home{
+	width: 30px;
+	height: 40px;
+	background: url(../icon/prev.png) no-repeat 0 10px;
+	background-size: 20px 20px;
+	position: absolute;
+	left: 5px;
+}
+#header h4{
+	width: 100px;
+	height: 40px;
+	line-height: 42px;
+	font-size: 17px;
+	position: absolute;
+	left: 30px;
+}
+#header .shuaxin{
+	width: 30px;
+	height: 40px;
+	background: url(../icon/shuaxin.png) no-repeat;
+	background-size: 22px 22px;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+#list{
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	top: 40px;
+	border-bottom: 1px solid #999;
+  overflow-y: scroll;
+  background: rgba(0,0,0,.8);
+}
+#list span{
+	width: 24%;
+	height: 40px;
+	display: inline-block;
+	font-size: 15px;
+	line-height: 50px;
+	text-align: center;
+  
+}
+#list span.on{
+	color: #FFC3AE;
+	font-size: 15px;
+	border-bottom: 2px solid #FFC3AE;
+	padding-bottom: -10px;
+  box-sizing: border-box;
+	cursor: pointer;
+}
+ul{
+  display: none;
+}
+ul.on{
+  display: block;
+  position: relative;
+  top: 80px;
+  background: rgba(0,0,0,.8);
+}
+ul .single{
+  width: 100%;
+  height: 438px;
+  overflow: scroll;
+}
+ul .single img{
+  width: 40%;
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 30%;
+}
+ul .single p{
+  font-size: 14px;
+  position: absolute;
+  top: 230px;
+  left: 28%; 
+}
+ul .list{
+  width: 100%;
+  height: 
+  438px;
+  overflow: scroll;
+}
+ul .list .top{
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #62635D;
+}
+ul .list .top .fl{
+  width: 69%;
+}
+ul .list .top .fl li{
+  width: 36%;
+  height: 40px;
+  float: left;
+}
+ul .list .top .fl li img{
+  width: 23px;
+  margin-top: 6px;
+  margin-left: 3%;
+}
+ul .list .top .fl li h4{
+  margin-top: -26px;
+  margin-left: 30px;
+  font-size: 10px;
+  color: #FFC3AE;
+}
+ul .list .top .fr{
+  width: 31%;
+  font-size: 10px;
+  margin-top: 10px;
+  text-align: right;
+}
+/*-------bottom下的图片文字统一设置-------*/
+ul .bottom{
+  width: 100%;
+  height: 410px;
+  overflow-y: scroll;
+  position: relative;
+}
+ul .bottom .fl{
+  width: 20%;
+  height: 60px;
+}
+ul .bottom .fl .pic{
+  width: 60%;
+  position: relative;
+  top: 10px;
+  left: 20%;
+}
+ul .bottom .fr{
+  width: 80%;
+  height: 60px;
+  border-bottom: 1px solid #999;
+  padding-bottom: 1px;
+  box-sizing: border-box;
+}
+ul .bottom .fr .more{
+  width: 15px;
+  position: relative;
+  left: 88%;
+  top: -20px;
+}
+ul .bottom .fr span{
+  position: relative;
+  top: 8px;
+  left: 5%;
+}
+ul .bottom .fr h5{
+  position: relative;
+  top: 15px;
+  left: 5%;
+}
+ul .singer{
+  width: 100%;
+  height: 438px;
+  overflow: scroll;
+}
+ul .singer img{
+  width: 40%;
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 30%;
+}
+ul .singer p{
+  font-size: 14px;
+  position: absolute;
+  top: 230px;
+  left: 24%; 
+}
+ul .singer h4{
+  width: 40%;
+  height: 35px;
+  border: 1px solid #FFC3AE;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 35px;
+  margin-top: 260px;
+  margin-left: 30%;
+  color: #FFC3AE;
+}
+ul .video{
+  width: 100%;
+  height: 438px;
+  overflow: scroll;
+}
+ul .video img{
+  width: 40%;
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 30%;
+}
+ul .video p{
+  font-size: 14px;
+  position: absolute;
+  top: 230px;
+  left: 14%; 
+}
+ul .video h4{
+  width: 40%;
+  height: 35px;
+  border: 1px solid #FFC3AE;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 35px;
+  margin-top: 260px;
+  margin-left: 30%;
+  color: #FFC3AE;
+}
+
+
+footer {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin-top: -50px;
+  background: rgba(0, 0, 0, 1);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+footer .pic{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  position: relative;
+  top: -10px;
+  left: 10px;
+}
+footer .pic img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+footer .info{
+  width: 200px;
+  height: 40px;
+  position: relative;
+}
+footer .info .play{
+  width: 230px;
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  top: -45px;
+  left: 80px;
+}
+footer .info .play p{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #FFC3AE;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 1px;
+}
+footer .info  #musicAudio{
+  position: relative;
+  top: -30px;
+}
+footer .info #progressBar{
+  width: 230px; 
+  height: 2px; 
+  background: #ccc; 
+  position: absolute; 
+  top: -17px; 
+  left: 80px;
+}
+footer .info #progress{
+  width: 4px; 
+  height: 4px; 
+  border-radius: 50%; 
+  background: #FFC3AE; 
+  position: absolute; 
+  top: -1px; 
+  left: 1px;
+}
+footer .info #musicAudio p{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+footer .info  #musicAudio #music_wrapper{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 220px;
+}
+footer .info #musicAudio #music_wrapper{
+  width: 20px;
+  height: 20px;
+}
+footer .info .next{
+  width: 30px;
+  height: 30px;
+  background: url(../icon/nextone.png) no-repeat;
+  background-size: 16px 16px;
+  position: absolute;
+  top: -29px;
+  left: 260px;
+}
+footer .info .list{
+  width: 30px;
+  height: 30px;
+  background: url(../icon/listm.png) no-repeat;
+  background-size: 22px 22px;
+  position: absolute;
+  top: -32px;
+  left: 290px;
+}
+footer .info .title{
+  width: 120px;
+  height: 20px;
+  position: absolute;
+  top: -55px;
+  left: 80px;
+}
+footer .info .name{
+  width: 100px;
+  height: 20px;
+  font-size: 6px;
+  position: absolute;
+  top: -40px;
+  left: 45px;
+}
+/*------mobile------*/
+@media only screen and (min-width: 375px) {
+  ul .single,ul .list,ul .singer,ul .video{height: 538px;}
+  ul .single p{left: 30%;}
+  ul .singer p{left: 28%;}
+  ul .video p{left: 20%;}
+  footer .info .play{width: 280px;}
+  footer .info  #musicAudio #music_wrapper{left: 260px;}
+  footer .info #progressBar{width: 280px;}
+  footer .info .next{left: 300px;}
+  footer .info .list{left: 340px;}
+}
+@media only screen and (min-width: 414px) {
+  ul .single,ul .list,ul .singer,ul .video{height: 638px;}
+  ul .single p{left: 33%;}
+  ul .video p{left: 24%;}
+  footer .info .play{width: 320px;}
+  footer .info  #musicAudio #music_wrapper{left: 300px;}
+  footer .info #progressBar{width: 320px;}
+  footer .info .next{left: 340px;}
+  footer .info .list{left: 380px;}
+}
+@media only screen and (min-width: 768px) {
+  ul .single,ul .list,ul .singer,ul .video{height: 895px;}
+  ul .single img{height: 200px; top: 200px;}
+  ul .single p{top: 450px; left: 40%;}
+  ul .singer img{height: 200px; top: 200px;}
+  ul .singer p{top: 450px; left: 38%;}
+  ul .singer h4{margin-top: 500px;}
+  ul .video img{height: 200px; top: 200px;}
+  ul .video p{top: 450px; left: 35%;}
+  ul .video h4{margin-top: 500px;}
+  ul .list .top .fl li h4{margin-left: 35px;}
+  ul .bottom .fl .pic{width: 30%; left: 35%;}
+  body{background: url(../images/bg1.jpg) fixed no-repeat 100% 100%; background-size: 100% 100%}
+  footer .info .play{width: 660px;}
+  footer .info  #musicAudio #music_wrapper{left: 640px;}
+  footer .info #progressBar{width: 660px;}
+  footer .info .next{left: 680px;}
+  footer .info .list{left: 720px;}
+}
+@media only screen and (min-width: 1024px) {
+  ul .single,ul .list,ul .singer,ul .video{height: 1295px;}
+  ul .single img{height: 240px; top: 250px;}
+  ul .single p{top: 550px; left: 42%;}
+  ul .singer img{height: 240px; top: 250px;}
+  ul .singer p{top: 550px; left: 42%;}
+  ul .singer h4{margin-top: 600px;}
+  ul .video img{height: 240px; top: 250px;}
+  ul .video p{top: 550px; left: 39%;}
+  ul .video h4{margin-top: 600px;}
+  ul .list .top .fl li h4{margin-left: 40px;}
+  ul .bottom .fl .pic{width: 20%; left: 40%;}
+  body{background: url(../images/bg1.jpg) fixed no-repeat 100% 100%; background-size: 100% 100%}
+  footer .info .play{width: 900px;}
+  footer .info  #musicAudio #music_wrapper{left: 900px;}
+  footer .info #progressBar{width: 920px;}
+  footer .info .next{left: 940px;}
+  footer .info .list{left: 980px;}
+}

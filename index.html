@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>酷狗音乐</title>
+<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/index.css">
+<style>
+a{color:white}
+</style>
+</head>
+<body>
+<!--主界面-->
+	<div class="wrapper">
+		<div id="container">
+			<header>
+				<h1>
+					<a href="javascript:;" class="slide-menu">
+						<img src="icon/menu.png" >
+					</a>
+					<ul id="header">
+						<li class="on">听</li>
+						<li>看</li>
+						<li>唱</li>
+					</ul>
+					<div class="on">
+						<section class="listen-con">
+							<ul class="con1">
+								<li class="con1-top">
+									<ul>
+										<span><img src="images/avatar.jpg" class="avatar"></span>
+										<span>
+											<h4>我要去火星</h4><br/>
+											<p>Lv.4</p>
+											<h5>听歌6588分钟</h5>
+										</span>
+										<span>
+											<a href=""><img src="icon/mic.png" class="mic"></a>
+											<font>|</font>
+											<a href=""><img src="icon/new.png" class="new"></a>
+										</span>
+									</ul>
+								</li>
+								<li class="con1-bottom">
+									<ul>
+										<span class="bottom-1">
+											<a href="localmusic.html">
+												<img src="icon/local.png" class="local">
+												<h4>本地音乐</h4>
+												<h5>32</h5>
+											</a>
+										</span>
+										<span class="bottom-2">
+											<a href="">
+												<img src="icon/like.png" class="like">
+												<h4>喜欢</h4>
+												<h5>0</h5>
+											</a>
+										</span>
+										<span class="bottom-3">
+											<a href="">
+												<img src="icon/download.png" class="download">
+												<h4>下载</h4>
+												<h5>32</h5>
+											</a>
+										</span>
+										<span class="bottom-4">
+											<a href="">
+												<img src="icon/recent.png" class="recent">
+												<h4>最近</h4>
+												<h5>91</h5>
+											</a>
+										</span>
+									</ul>
+								</li>
+							</ul>
+							<ul class="con2">
+								<li class="con2-top">
+									<ul>
+										<span class="top-1">
+											<a href="">
+												<p><img src="icon/you.png" class="you"></p>
+												<h4>乐库</h4>
+											</a>
+										</span>
+										<span class="top-2">
+											<a href="">
+												<p><img src="icon/list.png" class="list"></p>
+												<h4>歌单</h4>
+											</a>
+										</span>
+										<span class="top-3">
+											<a href="">
+												<p><img src="icon/radio.png" class="radio"></p>
+												<h4>电台酷群</h4>
+											</a>
+										</span>
+										<span class="top-4">
+											<a href="">
+												<p><img src="icon/guess.png" class="guess"></p>
+												<h4>猜你喜欢</h4>
+											</a>
+										</span>
+										<span class="top-5">
+											<a href="">
+												<p><img src="icon/day.png" class="day"></p>
+												<h4>每日推荐</h4>
+											</a>
+										</span>
+										<span class="top-6">
+											<a href="">
+												<p><img src="icon/circle.png" class="circle"></p>
+												<h4>音乐圈</h4>
+											</a>
+										</span>
+									</ul>
+								</li>
+								<li class="con2-bottom">
+									<img src="icon/spread.png">&nbsp;&nbsp;<p>推广</p>
+									<ul id="scrollnews"> 
+									     <li>【推荐】15秒遇见你的Ta</li>
+										 <li>装了这个APP，不用再去KTV</li> 
+										 <li>解救单身狗优质交友等你来撩！</li>
+										 <li>出租女神，双11陪你玩转语音社交</li> 
+										 <li>蒙面唱将独家身份线索戳！这！里！</li> 
+										 <li>开口跪，酥到骨子里的好声音!</li> 
+										 <li>蒙面倒计时，谁将进入年度盛典?</li> 
+										 <li>投票最爱，莫文蔚张杰唱给你听</li> 
+									</ul> 
+								</li>
+							</ul>
+						</section>
+					</div>
+					<div>
+						<section id="look-con">
+							<ul id="tab">
+								<span class="true">直播</span>
+								<span>短视频</span>
+								<span>MV</span>
+							</ul>
+							<ol class="true">
+								<ul class="look-header">
+									<h4>小时榜</h4>
+									<h5>统计本小时主播的排名榜</h5>
+									<p style="top: 13px; left: 57%;"><img src="images/a1.jpg"></p><img src="icon/king1.png" class="king1">
+									<p style="top: 13px; left: 69%;"><img src="images/a2.jpg"></p><img src="icon/king2.png" class="king2">
+									<p style="top: 13px; left: 81%;"><img src="images/a3.jpg"></p><img src="icon/king3.png" class="king3">
+									<span><a href=""><img src="icon/next.png"></a></span>
+								</ul>
+								<ul class="look-list">
+									<p class="list-1">
+										<a href="">
+											<span><img src="icon/show.png" class="show"></span>
+											<span class="til">新秀</span>
+										</a>
+									</p>
+									<p class="list-2">
+										<a href="">
+											<span><img src="icon/loc.png" class="loc"></span>
+											<span class="til">附近</span>
+										</a>
+									</p>
+									<p class="list-3">
+										<a href="">
+											<span><img src="icon/voice.png" class="voice"></span>
+											<span class="til">音乐</span>
+										</a>
+									</p>
+									<p class="list-4">
+										<a href="">
+											<span><img src="icon/sear.png" class="sear"></span>
+											<span class="til">搜索</span>
+										</a>
+									</p>
+									<p class="list-5">
+										<a href="">
+											<span><img src="icon/my.png" class="my"></span>
+											<span class="til">我的</span>
+										</a>
+									</p>
+								</ul>
+								<ul class="look-video">
+									<a class="d1" href="">
+										<p class="zb"><img src="images/6_04.jpg"></p>
+										<h3>YR一yimo一沫</h3>
+										<h4>在播：情一动心就痛</h4>
+										<h6>2.7万人</h6>
+									</a>
+									<a class="d2" href="">
+										<p class="zb"><img src="images/6_05.jpg"></p>
+										<h3>阿宝音乐</h3>
+										<h4>在唱：真的不容易</h4>
+										<h6>2.4万人</h6>
+									</a>
+									<a class="d3" href="">
+										<p class="zb"><img src="images/6_08.jpg"></p>
+										<h3>妲己</h3>
+										<h4>在唱：真的不容易</h4>
+										<h6>3.2万人</h6>
+									</a>
+									<a class="d4" href="">
+										<p class="zb"><img src="images/6_12.jpg"></p>
+										<h3>丁当老师</h3>
+										<h4>在唱：倩女幽魂</h4>
+										<h6>2.9万人</h6>
+									</a>
+									<a class="d5" href="">
+										<p class="zb"><img src="images/6_09.jpg"></p>
+										<h3>丁思忖</h3>
+										<h4>在播：调侃</h4>
+										<h6>3950人</h6>
+									</a>
+									<a class="d6" href="">
+										<p class="zb"><img src="images/6_11.jpg"></p>
+										<h3>颜夕是农村人</h3>
+										<h4>颜夕是农村人</h4>
+										<h6>4470人</h6>
+									</a>
+									<a class="d7" href="">
+										<p class="zb"><img src="images/6_14.jpg"></p>
+										<h3>陈依然</h3>
+										<h4>在唱：消愁</h4>
+										<h6>2.3万人</h6>
+									</a>
+									<a class="d8" href="">
+										<p class="zb"><img src="images/6_15.jpg"></p>
+										<h3>睡不醒的人</h3>
+										<h4>在播：三天三夜</h4>
+										<h6>4.2万人</h6>
+									</a>
+									<a class="d9" href="">
+										<p class="zb"><img src="images/6_18.jpg"></p>
+										<h3>沈子瑜</h3>
+										<h4>在播：富士山下</h4>
+										<h6>3.2万人</h6>
+									</a>
+									<a class="d10" href="">
+										<p class="zb"><img src="images/6_21.jpg"></p>
+										<h3>苏珊丫头</h3>
+										<h4>在唱：拥抱你离去</h4>
+										<h6>1.2万人</h6>
+									</a>
+									<a class="d11" href="">
+										<p class="zb"><img src="images/6_20.jpg"></p>
+										<h3>瑶瑶</h3>
+										<h4>在播：花桥流水</h4>
+										<h6>1万人</h6>
+									</a>
+									<a class="d12" href="">
+										<p class="zb"><img src="images/6_23.jpg"></p>
+										<h3>冷月oo</h3>
+										<h4>在播：阳仔新春送贺礼</h4>
+										<h6>2.2万人</h6>
+									</a>
+									<a class="d13" href="">
+										<p class="zb"><img src="images/6_25.jpg"></p>
+										<h3>龙舞传媒dj宝贝</h3>
+										<h4>在播：新裤子</h4>
+										<h6>3.2万人</h6>
+									</a>
+									<a class="d14" href="">
+										<p class="zb"><img src="images/6_30.jpg"></p>
+										<h3>最美-丽娜</h3>
+										<h4>最美-丽娜</h4>
+										<h6>9980人</h6>
+									</a>
+								</ul>
+							</ol>
+							<ol>
+								<ul class="list-radio">
+									<p class="radio-1">
+										<a href="">
+											<span><img src="icon/loc.png" class="loc"></span>
+											<span class="til">上海</span>
+										</a>
+									</p>
+									<p class="radio-2">
+										<a href="">
+											<span><img src="icon/new3.png" class="new"></span>
+											<span class="til">最新</span>
+										</a>
+									</p>
+									<p class="radio-3">
+										<a href="">
+											<span><img src="icon/topic.png" class="topic"></span>
+											<span class="til">话题</span>
+										</a>
+									</p>
+									<p class="radio-4">
+										<a href="">
+											<span><img src="icon/care.png" class="care"></span>
+											<span class="til">关注</span>
+										</a>
+									</p>
+								</ul>
+								<ul class="radio-play">
+									<a class="p1" href="">
+										<p><img src="images/3_04.jpg" class="short"></p>
+										<h3>为什么视频那么长</h3>
+										<img src="icon/good.png" class="good">
+										<h4>328</h4>
+										<img src="icon/play.png" class="play">
+										<h5>3674</h5>
+									</a>
+									<a class="p2" href="">
+										<p><img src="images/3_08.jpg" class="short"></p>
+										<h3>致命</h3>
+										<img src="icon/good.png" class="good">
+										<h4>428</h4>
+										<img src="icon/play.png" class="play">
+										<h5>3444</h5>
+									</a>
+									<a class="p3" href="">
+										<p><img src="images/3_09.jpg" class="short"></p>
+										<h3>斯里兰卡</h3>
+										<img src="icon/good.png" class="good">
+										<h4>564</h4>
+										<img src="icon/play.png" class="play">
+										<h5>4556</h5>
+									</a>
+									<a class="p4" href="">
+										<p><img src="images/3_12.jpg" class="short"></p>
+										<h3>队长明天下午见</h3>
+										<img src="icon/good.png" class="good">
+										<h4>400</h4>
+										<img src="icon/play.png" class="play">
+										<h5>2456</h5>
+									</a>
+									<a class="p5" href="">
+										<p><img src="images/3_19.jpg" class="short"></p>
+										<h3>嗯嗯</h3>
+										<img src="icon/good.png" class="good">
+										<h4>430</h4>
+										<img src="icon/play.png" class="play">
+										<h5>4356</h5>
+									</a>
+									<a class="p6" href="">
+										<p><img src="images/3_14.jpg" class="short"></p>
+										<h3>我的碗里没放油</h3>
+										<img src="icon/good.png" class="good">
+										<h4>670</h4>
+										<img src="icon/play.png" class="play">
+										<h5>9876</h5>
+									</a>
+									<a class="p7" href="">
+										<p><img src="images/3_18.jpg" class="short"></p>
+										<h3>李白上身</h3>
+										<img src="icon/good.png" class="good">
+										<h4>370</h4>
+										<img src="icon/play.png" class="play">
+										<h5>2876</h5>
+									</a>
+									<a class="p8" href="">
+										<p><img src="images/3_24.jpg" class="short"></p>
+										<h3>你确定你不关注一下？</h3>
+										<img src="icon/good.png" class="good">
+										<h4>470</h4>
+										<img src="icon/play.png" class="play">
+										<h5>5876</h5>
+									</a>
+									<a class="p9" href="">
+										<p><img src="images/3_22.jpg" class="short"></p>
+										<h3>我要飞得更高</h3>
+										<img src="icon/good.png" class="good">
+										<h4>770</h4>
+										<img src="icon/play.png" class="play">
+										<h5>8876</h5>
+									</a>
+									<a class="p10" href="">
+										<p><img src="images/3_27.jpg" class="short"></p>
+										<h3>不要再说P照片</h3>
+										<img src="icon/good.png" class="good">
+										<h4>370</h4>
+										<img src="icon/play.png" class="play">
+										<h5>2876</h5>
+									</a>
+									<a class="p11" href="">
+										<p><img src="images/3_28.jpg" class="short"></p>
+										<h3>新人主播求关注</h3>
+										<img src="icon/good.png" class="good">
+										<h4>270</h4>
+										<img src="icon/play.png" class="play">
+										<h5>1876</h5>
+									</a>
+									<a class="p12" href="">
+										<p><img src="images/3_31.jpg" class="short"></p>
+										<h3>可爱的爷来了</h3>
+										<img src="icon/good.png" class="good">
+										<h4>570</h4>
+										<img src="icon/play.png" class="play">
+										<h5>5876</h5>
+									</a>
+									<a class="p13" href="">
+										<p><img src="images/3_32.jpg" class="short"></p>
+										<h3>谁还不会跳个舞</h3>
+										<img src="icon/good.png" class="good">
+										<h4>870</h4>
+										<img src="icon/play.png" class="play">
+										<h5>9876</h5>
+									</a>
+									<a class="p14" href="">
+										<p><img src="images/3_35.jpg" class="short"></p>
+										<h3>我不管我是你的小可爱</h3>
+										<img src="icon/good.png" class="good">
+										<h4>470</h4>
+										<img src="icon/play.png" class="play">
+										<h5>7876</h5>
+									</a>
+									<a class="p15" href="">
+										<p><img src="images/3_36.jpg" class="short"></p>
+										<h3>喝不完啦</h3>
+										<img src="icon/good.png" class="good">
+										<h4>256</h4>
+										<img src="icon/play.png" class="play">
+										<h5>1876</h5>
+									</a>
+									<a class="p16" href="">
+										<p><img src="images/3_02.jpg" class="short"></p>
+										<h3>别问我是谁</h3>
+										<img src="icon/good.png" class="good">
+										<h4>270</h4>
+										<img src="icon/play.png" class="play">
+										<h5>2876</h5>
+									</a>
+								</ul>
+							</ol>
+							<ol>
+								<ul class="mv-list">
+									<p class="fl">全部分类</p>
+									<p class="fr">最新上架</p>
+								</ul>
+								<ul class="sort">
+									<li>全部</li>
+									<li>华语</li>
+									<li>日韩</li>
+									<li>欧美</li>
+									<li>现场</li>
+									<li>性感</li>
+									<li>网络</li>
+									<li>影视</li>
+									<li>神曲</li>
+									<li>舞曲</li>
+									<li>经典</li>
+									<li>广场舞</li>
+								</ul>
+								<ul class="mv">
+									<a class="mv1" href="">
+										<p><img src="images/2_02.jpg" class="short"></p>
+										<h3>没有你陪伴我真的好孤单</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>270</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>2876</h5>
+									</a>
+									<a class="mv2" href="">
+										<p><img src="images/2_04.jpg" class="short"></p>
+										<h3>邓超崩溃人戏不分？</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>970</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>9876</h5>
+									</a>
+									<a class="mv3" href="">
+										<p><img src="images/2_08.jpg" class="short"></p>
+										<h3>男粉丝卖力应援！</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>370</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>4876</h5>
+									</a>
+									<a class="mv4" href="">
+										<p><img src="images/2_09.jpg" class="short"></p>
+										<h3>你是我的《Candy》</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>270</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>4876</h5>
+									</a>
+									<a class="mv5" href="">
+										<p><img src="images/2_12.jpg" class="short"></p>
+										<h3>不后悔选择了这样</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>170</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>2876</h5>
+									</a>
+									<a class="mv6" href="">
+										<p><img src="images/2_16.jpg" class="short"></p>
+										<h3>中国元素霸屏！</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>370</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>4834</h5>
+									</a>
+									<a class="mv7" href="">
+										<p><img src="images/2_17.jpg" class="short"></p>
+										<h3>新造型解锁！</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>470</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>3834</h5>
+									</a>
+									<a class="mv8" href="">
+										<p><img src="images/2_13.jpg" class="short"></p>
+										<h3>表白巴黎lovelyz</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>230</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>3234</h5>
+									</a>
+									<a class="mv9" href="">
+										<p><img src="images/2_20.jpg" class="short"></p>
+										<h3>疯狂打call！wanna</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>530</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>5254</h5>
+									</a>
+									<a class="mv10" href="">
+										<p><img src="images/2_21.jpg" class="short"></p>
+										<h3>帅炸了！monsta</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>290</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>3034</h5>
+									</a>
+									<a class="mv11" href="">
+										<p><img src="images/2_24.jpg" class="short"></p>
+										<h3>超带感！西语热舞</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>1.7万</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>5555</h5>
+									</a>
+									<a class="mv12" href="">
+										<p><img src="images/2_25.jpg" class="short"></p>
+										<h3>wanna one 后续</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>690</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>8034</h5>
+									</a>
+									<a class="mv13" href="">
+										<p><img src="images/2_28.jpg" class="short"></p>
+										<h3>好温柔！超可爱！</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>1090</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>5034</h5>
+									</a>
+									<a class="mv14" href="">
+										<p><img src="images/2_29.jpg" class="short"></p>
+										<h3>魔性音乐配上少女</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>590</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>5334</h5>
+									</a>
+									<a class="mv15" href="">
+										<p><img src="images/2_32.jpg" class="short"></p>
+										<h3>东海亲自作词的叙事曲</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>790</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>8994</h5>
+									</a>
+									<a class="mv16" href="">
+										<p><img src="images/2_33.jpg" class="short"></p>
+										<h3>铁打的兄弟吹不散的情义</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>890</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>9994</h5>
+									</a>
+									<a class="mv17" href="">
+										<p><img src="images/2_36.jpg" class="short"></p>
+										<h3>韩国最新洗脑神曲</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>1090</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>1.2万</h5>
+									</a>
+									<a class="mv18" href="">
+										<p><img src="images/2_37.jpg" class="short"></p>
+										<h3>霉霉超霸气！新mv</h3>
+										<img src="icon/play1.png" class="good fl">
+										<h4>1290</h4>
+										<img src="icon/msg.png" class="play">
+										<h5>1.6万</h5>
+									</a>
+								</ul>
+							</ol>
+						</section>
+					</div>
+					<div>
+						<section class="sing-con">
+						  	<ul class="box_img">
+								<ul>
+									<li><a href=""><img src="images/banner1.jpg"></a></li>
+									<li><a href=""><img src="images/banner2.jpg"></a></li>
+									<li><a href=""><img src="images/banner3.jpg"></a></li>
+									<li><a href=""><img src="images/banner4.jpg"></a></li>
+									<li><a href=""><img src="images/banner5.jpg"></a></li>
+								</ul>
+							</ul>
+							<ul class="sing-list">
+								<p class="list-1">
+									<a href="">
+										<span><img src="icon/like.png" class="care"></span>
+										<span class="til">关注</span>
+									</a>
+								</p>
+								<p class="list-2">
+									<a href="">
+										<span><img src="icon/sing.png" class="sing"></span>
+										<span class="til">我要唱</span>
+									</a>
+								</p>
+								<p class="list-3">
+									<a href="">
+										<span><img src="icon/mine.png" class="my"></span>
+										<span class="til">我的</span>
+									</a>
+								</p>
+							</ul>
+							<ul class="near">
+								<ol class="near-1">
+									<a href="">
+										<p><img src="images/5_03.jpg" class="nearpic"></p>
+										<h4>抢地盘，做地主</h4>
+										<h5></h5>
+									</a>
+								</ol>
+								<ol class="near-2">
+									<a href="">
+										<p><img src="images/5_05.jpg" class="nearpic"></p>
+										<h4>金色童年</h4>
+										<h5>那一缕阳光</h5>
+									</a>
+								</ol>
+								<ol class="near-3">
+									<a href="">
+										<p><img src="images/5_12.jpg" class="nearpic"></p>
+										<h4>游子梦</h4>
+										<h5>阳光明媚</h5>
+									</a>
+								</ol>
+							</ul>
+							<ul class="kg">
+								<ol class="kg-1">
+									<a href="">
+										<p><img src="images/5_28.jpg" class="kgpic"></p>
+										<h4>听歌声邂逅主播</h4>
+										<h5></h5>
+									</a>
+								</ol>
+								<ol class="kg-2">
+									<a href="">
+										<p><img src="images/5_30.jpg" class="kgpic"></p>
+										<h4>没有你陪伴</h4>
+										<h5>purgatory</h5>
+									</a>
+								</ol>
+								<ol class="kg-3">
+									<a href="">
+										<p><img src="images/5_31.jpg" class="kgpic"></p>
+										<h4>丑八怪</h4>
+										<h5>他爱上唱歌</h5>
+									</a>
+								</ol>
+							</ul>
+							<ul class="lt">
+								<ol class="lt-1">
+									<a href="">
+										<p><img src="images/5_35.jpg" class="ltpic"></p>
+										<h4>听歌声邂逅主播</h4>
+										<h5></h5>
+									</a>
+								</ol>
+								<ol class="lt-2">
+									<a href="">
+										<p><img src="images/5_14.jpg" class="ltpic"></p>
+										<h4>大圈圈</h4>
+										<h5>华迷音吧</h5>
+									</a>
+								</ol>
+								<ol class="lt-3">
+									<a href="">
+										<p><img src="images/5_36.jpg" class="ltpic"></p>
+										<h4>宝宝颜</h4>
+										<h5>风里雨里</h5>
+									</a>
+								</ol>
+							</ul>
+						</section>
+					</div>
+					<a href="" class="search"><img src="icon/search.png" ></a>
+				</h1>
+			</header>
+		</div>
+	</div>
+<!--侧边导航-->
+	<div class="slide-mask"></div>
+	<aside class="slide-wrapper">
+		<div>
+			<div style="border-bottom: 1px solid #262626;">
+				<div class="avatar">
+					<img src="images/avatar.jpg" alt="">
+				</div>
+				<div class="nickname">
+					<ul>
+						<li class="name">我要去火星</li>
+						<li class="lv">Lv.4</li>
+					</ul>
+				</div>
+			</div>
+			<ul>
+				<li><a href="#"><img src="icon/news.png"><p>消息中心</p></a></li>
+				<li><a href="#"><img src="icon/skin.png"><p>皮肤中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 8px;color: #CACAC2;">自定义皮肤</span></p></a></li>
+				<li><a href="#"><img src="icon/member.png"><p>会员中心</p></a></li>
+				<li><a href="#"><img src="icon/timing.png"><p>定时关闭</p></a></li>
+				<li><a href="#"><img src="icon/sound.png"><p>蝰蛇音效</p></a></li>
+				<li><a href="#"><img src="icon/tool.png"><p>音乐工具</p></a></li>
+				<li><a href="#" style="border-bottom: 1px solid #262626;"><img src="icon/ring.png"><p>铃声彩铃</p></a></li>
+				<li><a href="#"><img src="icon/wifi.png"><p>仅WIFI联网</p></a></li>
+				<li><a href="#"><img src="icon/desktop.png"><p>桌面歌词</p></a></li>
+				<li><a href="#" style="border-bottom: 1px solid #262626;"><img src="icon/lock.png"><p>锁屏歌词</p></a></li>
+			</ul>
+			<div>
+				<ul class="bottom">
+					<li><a href="#"><img src="icon/set.png"><p>设置</p></a></li>
+					<li><a href="#"><img src="icon/out.png"><p>退出</p></a></li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+<!--播放-->
+	<footer>
+		<div class="pic">
+			<img src="images/1_42.jpg">
+		</div>
+		<div class="info">
+			<div class="next"></div>
+			<div class="list"></div>
+			<div class="title">
+				<marquee behavior="scroll" direction="left">Rolling in the deep</marquee>
+			</div>
+			<div class="name">Adele</div>
+			<audio src="video/Adele - Rolling in the Deep.mp3" id="audio"></audio>
+			<div id="musicAudio">
+			    <img id="music_wrapper" onclick="playOrPaused(this)" src="icon/play.png">
+				<div id="progressBar">
+					<div id="progress"></div>
+				</div>
+				<p id="musicAudioTime"><span id="currentTime">00:00</span><span>&#47;</span><span id="totalTime">12:00</span></p>
+			</div>
+		</div>
+	</footer>
+<!--侧边栏-->
+	<script>
+		$(function(){
+			$('aside.slide-wrapper').on('touchstart', 'li', function(e){
+				$(this).addClass('current').siblings('li').removeClass('current');
+			});
+
+			$('a.slide-menu').on('click', function(e){
+				var wh = $('div.wrapperhove'+'rtree').height();
+				$('div.slide-mask').css('height', wh).show();
+				$('aside.slide-wrapper').css('height', wh).addClass('moved');
+			});
+
+			$('div.slide-mask').on('click', function(){
+			$('div.slide-mask').hide();
+			$('aside.slide-wrapper').removeClass('moved');
+			});
+		});
+	</script>
+<!--听看唱：tab选项卡-->
+	<script type="text/javascript">
+		var oH=document.getElementById("header");
+		var oCon=document.getElementById("container");
+		var oLi=oH.getElementsByTagName("li");
+		var oDiv=oCon.getElementsByTagName("div");
+		var num=oLi.length;
+
+		for(var i=0;i<num;i++){//扫描用户操作
+			oLi[i].index=i;
+			oLi[i].onclick=function(){
+				for(var j=0;j<num;j++){//关所有
+					oLi[j].className="";
+					oDiv[j].className="";
+				}
+				console.log(this.index);
+				this.className="on";//开一个
+				oDiv[this.index].className="on";
+				//this.index---实现了分类标题oSpan与oDiv
+			}
+		}
+		console.log(oDiv);
+	</script>
+<!--推广：文字滚动-->
+	<script type="text/javascript"> 
+	  var scrollnews = document.getElementById('scrollnews'); 
+	  var lis = scrollnews.getElementsByTagName('li'); 
+	  var ml = 0; 
+	  var timer1 = setInterval(function(){ 
+	     var liHeight = lis[0].offsetHeight;
+	     var timer2 = setInterval(function(){ 
+	        scrollnews.scrollTop = (++ml); 
+	        if(ml == liHeight){ 
+	            clearInterval(timer2); 
+	            scrollnews.scrollTop = 0;
+	            ml = 0; 
+	            lis[0].parentNode.appendChild(lis[0]);
+	        } 
+	     },10); 
+	  },5000);
+	</script>
+<!--直播短视频MV：tab选项卡-->
+	<script type="text/javascript">
+		var oTab=document.getElementById("tab");
+		var oLook=document.getElementById("look-con");
+		var oS=oTab.getElementsByTagName("span");
+		var oO=oLook.getElementsByTagName("ol");
+		var n=oS.length;
+
+		for(var i=0;i<n;i++){//扫描用户操作
+			oS[i].index=i;
+			oS[i].onclick=function(){
+				for(var j=0;j<n;j++){//关所有
+					oS[j].className="";
+					oO[j].className="";
+				}
+				console.log(this.index);
+				this.className="true";//开一个
+				oO[this.index].className="true";
+				//this.index---实现了分类标题oS与oO
+			}
+		}
+	</script>
+<!--图片轮播-->
+    <script>
+    	$(function(){
+    		var num=$('.box_img ul li a').size();
+    		var index=0;//自动轮播
+            var timer=null;
+            $('.box_img ul li').eq(0).show();
+            timer=window.setInterval(move,2000);
+            function move(){
+            	index++;
+            	if(index==num){
+            		index=0;
+            	}
+            	$('.box_img ul li').eq(index).fadeIn().siblings().fadeOut();
+            }
+    	});
+    </script>
+<!--音乐播放进度-->
+    <script>
+    	var audio ;
+    window.onload = function(){
+        initAudio();
+    }
+    var initAudio = function(){
+        //初始化页面
+        document.getElementById("musicAudio").innerHTML=
+        "<img id='music_wrapper' onclick='playOrPaused(this)' src='icon/play.png'>"+
+        "<div id='progressBar'>"+
+        "<div id='progress'></div>"+
+        "</div>"+
+        "<p id='musicAudioTime'><span id='currentTime'>00:00</span><span>&#47;</span><span id='totalTime'>12:00</span></p>";
+        //初始化对象
+        audio = document.getElementById('audio');
+        //初始化  当前时间
+        getCurrentTime();
+        //初始化  总时间
+        var totalTime=parseInt(audio.duration/60);
+        var seconds=parseInt(audio.duration%60);
+        if(totalTime==0){
+            if(seconds>9){
+                totalTime="00:"+seconds;
+            }else{
+                totalTime="00:0"+seconds;
+            }
+        }else{
+            var totalTimePre,totalTimeNext;
+            if(totalTime>9){
+                totalTimePre=totalTime;
+            }else{
+                totalTimePre="0"+totalTime;
+            }
+            if(seconds>9){
+                totalTimeNext=seconds;
+            }else{
+                totalTimeNext="0"+seconds;
+            }
+            totalTime=totalTimePre+":"+totalTimeNext;
+        }
+        document.getElementById("totalTime").innerText=totalTime;
+    }
+    //更新进度条当前值
+    function updateProgressVal(){
+        var progressVal=audio.currentTime/audio.duration*140;
+        document.getElementById("progress").style.width=progressVal+"px";
+    }
+    //更新当前时间
+    function getCurrentTime(){
+        var currentTime=audio.currentTime;
+        var totalTime=parseInt(currentTime/60);
+        var seconds=parseInt(currentTime%60);
+        if(totalTime==0){
+            if(seconds>9){
+                totalTime="00:"+seconds;
+            }else{
+                totalTime="00:0"+seconds;
+            }
+        }else{
+            var totalTimePre,totalTimeNext;
+            if(totalTime>9){
+                totalTimePre=totalTime;
+            }else{
+                totalTimePre="0"+totalTime;
+            }
+            if(seconds>9){
+                totalTimeNext=seconds;
+            }else{
+                totalTimeNext="0"+seconds;
+            }
+            totalTime=totalTimePre+":"+totalTimeNext;
+        }
+        document.getElementById("currentTime").innerText=totalTime;
+    }
+    //暂停或播放
+    var progressTimer;
+    function playOrPaused(obj){
+        if(audio.paused){
+            audio.play();
+            progressTimer=window.setInterval(audioProgress,100);
+            document.getElementById("music_wrapper").setAttribute("src","icon/stop.png");
+            return;
+        }
+        audio.pause();
+        document.getElementById("music_wrapper").setAttribute("src","icon/play.png")
+    }
+
+    function audioProgress(){
+        if(audio.currentTime <audio.duration){
+            if(audio.played){
+                //更新当前时间
+                getCurrentTime();
+                //更新进度条
+                updateProgressVal();
+            }
+        }else{
+            clearInterval(progressTimer);
+        }
+    }
+
+    </script>
+</body>
+</html>

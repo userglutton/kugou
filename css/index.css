@@ -1,0 +1,2221 @@
+body {
+  word-wrap: break-word;
+  -webkit-text-size-adjust: none;
+}
+input[type=submit],
+input[type=button],
+input[type=text],
+textarea,
+button,
+select {
+  font-size: 1em;
+  outline: none;
+  -webkit-appearance: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+::-webkit-input-placeholder {
+  color: #999999;
+}
+:-ms-input-placeholder {
+  color: #999999;
+}
+.cube {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.display-flex {
+  display: -webkit-flex;
+  display: flex;
+}
+.box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  font: normal 14px/1.5 Arial, Helvetica, "Microsoft YaHei", STHeiti, "Droid Sans Fallback", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  height: 100%;
+  background: url(../images/bg1.jpg) fixed no-repeat center center;
+   overflow: hidden; 
+  z-index: -999;
+}
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /*苹果手持设备的浏览器属性，意思是：点击它，它就会出现一个半透明的灰色背景。webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节。 */
+}
+ h1,h2,h3,h4,h5,h6 {
+  font-weight: 100;
+} 
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.wrapper {
+  padding-bottom: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapper #container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+div.slide-mask {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  display: none;
+}
+aside.slide-wrapper {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 75%;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+aside.slide-wrapper > div {
+  background: rgba(0,0,0,.3);
+  min-height: 100%;
+}
+aside.slide-wrapper > div > div {
+  padding: 0 10px
+  height: 80px;
+  background: rgba(0,0,0,.5);
+  overflow: hidden;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+aside.slide-wrapper > div > div .avatar{
+  padding-top: 15px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+aside.slide-wrapper > div > div .avatar img{
+  width: 50px;
+  height: 50px;
+  border: 1px solid none;
+  border-radius: 50%;
+  line-height: 45px;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: normal;
+}
+aside.slide-wrapper > div > div .nickname{
+  width: 150px;
+  height: 50px;
+  margin-left: 70px;
+  margin-top: -55px;
+  line-height: 50px;
+}
+aside.slide-wrapper > div > div .nickname li{
+  line-height: 28px;
+  font-size: 15px;
+}
+aside.slide-wrapper > div > div .nickname li.lv{
+  width: 30px;
+  height: 15px;
+  font-size: 8px;
+  color: #FF9800;
+  border: 1px solid #FF9800;
+  border-radius: 5px;
+  line-height: 15px;
+  text-align: center;
+}
+aside.slide-wrapper.moved {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+aside.slide-wrapper li > a {
+  padding: 10px 10px;
+  font-size: 15px;
+  display: block;
+  color: #fff;
+}
+aside.slide-wrapper li > a img{
+  width: 8%;
+  height: 10%;
+  margin-left: 4%;
+}
+aside.slide-wrapper li > a p{
+  margin-left: 25%;
+  margin-top: -23px;
+}
+aside.slide-wrapper .bottom li a {
+  width: 37%;
+  padding: 10px 10px;
+  font-size: 15px;
+  display: block;
+  color: #fff;
+  float: left;
+  margin-left: 1%;
+}
+aside.slide-wrapper .bottom li a img{
+  width: 25%;
+  height: 35%;
+}
+aside.slide-wrapper .bottom li a p{
+  margin-left: 40%;
+  margin-top: -28px;
+}
+aside.slide-wrapper li.current > a {
+  background-color: #262626;
+}
+header h1 {
+  width: 100%;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  z-index: 0;
+}
+header h1 a {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  width: 15px;
+  height: 13px;
+}
+header h1 .slide-menu img {
+  display: block;
+  width: 15px;
+  height: 13px;
+  cursor: pointer;
+}
+header h1 #header{
+  width: 70%;
+  height: 40px;
+  margin: 0px 15%;
+}
+header h1 #header li{
+  width: 15%;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+  float: left;
+  margin-left: 12%;
+  top: 0;
+  color: #F5FAF4;
+}
+header h1 .search{
+  width: 15px;
+  height: 13px;
+  position: absolute;
+  top: 5px;
+  left: 87%;
+  cursor: pointer;
+}
+header h1 .search img{
+  widows: 20px;
+  height: 20px;
+}
+header h1 div{
+  width: 100%;
+  height: 477px;
+  margin-top: 0px;
+  display: none;
+}
+header h1 div.on{
+  display: block;
+}
+header h1 #header li.on{
+  text-shadow: 0px 0px 20px #fff;
+}
+header h1 div .listen-con{
+  width: 100%;
+  height: 180px;
+  background: rgba(0,0,0,.8);
+}
+header h1 div .listen-con .con1{
+  width: 96%;
+  height: 180;
+  margin: 0 auto;
+  border-bottom: 1px solid #292A25;
+}
+header h1 div .listen-con .con1-top{
+  width: 100%;
+  height: 70px;
+}
+header h1 div .listen-con .con1-top ul{
+  position: relative;
+}
+header h1 div .listen-con .con1-top ul span img.avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px 10px;
+  position: absolute;
+  left: 0;
+}
+header h1 div .listen-con .con1-top ul span h4{
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  top: 8px;
+  left: 65px;
+  font-size: 14px;
+}
+header h1 div .listen-con .con1-top ul span p{
+  width: 30px;
+  height: 12px;
+  font-size: 8px;
+  line-height: 12px;
+  text-align: center;
+  color: #FF9800;
+  border: 1px solid #FF9800;
+  border-radius: 3px;
+  position: absolute;
+  left: 80px;
+}
+header h1 div .listen-con .con1-top ul span h5{
+  width: 80px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 10px;
+  color: #CACAC2;
+  position: absolute;
+  left: 115px;
+}
+header h1 div .listen-con .con1-top ul span img.mic{
+  width: 16px;
+  position: absolute;
+  top: 15px;
+  left: 220px;
+}
+header h1 div .listen-con .con1-top ul span font{
+  position: absolute;
+  top: 18px;
+  left: 255px;
+  color: #F9F9FF;
+}
+header h1 div .listen-con .con1-top ul span img.new{
+  width: 18px;
+  position: absolute;
+  top: 18px;
+  left: 260px;
+}
+header h1 div .listen-con .con1-bottom ul{
+  position: relative;
+}
+header h1 div .listen-con .con1-bottom ul span{
+  width: 20%;
+  height: 90px;
+  position: absolute;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-1{
+  top: 10px;
+  left: 6%;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-1 .local{
+  width: 20px;
+  margin-left: 60%;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-1 a h4{
+  width: 50px;
+  font-size: 10px;
+  margin-top: -15px;
+  margin-left: -5px;
+  text-align: center;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-1 a h5{
+  width: 50px;
+  font-size: 8px;
+  margin-top: -23px;
+  margin-left: -5px;
+  color: #CACAC2;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-2{
+  top: 10px;
+  left: 28%;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-2 .like{
+  height: 25px;
+  margin-left: 60%;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-2 a h4{
+  width: 50px;
+  font-size: 10px;
+  margin-top: -15px;
+  margin-left: -2px;
+  text-align: center;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-2 a h5{
+  width: 50px;
+  font-size: 8px;
+  margin-top: -23px;
+  margin-left: -2px;
+  color: #CACAC2;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-3{
+  top: 10px;
+  left: 51%;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-3 .download{
+  width: 24px;
+  height: 28px;
+  margin-left: 60%;
+  margin-top: -5px;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-3 a h4{
+  width: 50px;
+  font-size: 10px;
+  margin-top: -15px;
+  margin-left: -4px;
+  text-align: center;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-3 a h5{
+  width: 50px;
+  font-size: 8px;
+  margin-top: -23px;
+  margin-left: -4px;
+  color: #CACAC2;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-4{
+  top: 10px;
+  left: 74%;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-4 .recent{
+  width: 27px;
+  height: 27px;
+  margin-left: 60%;
+  margin-top: -3px;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-4 a h4{
+  width: 50px;
+  font-size: 10px;
+  margin-top: -15px;
+  margin-left: -3px;
+  text-align: center;
+}
+header h1 div .listen-con .con1-bottom ul .bottom-4 a h5{
+  width: 50px;
+  font-size: 8px;
+  margin-top: -23px;
+  margin-left: -3px;
+  color: #CACAC2;
+}
+header h1 div .listen-con .con2{
+  width: 100%;
+  height: 287px;
+  margin: 120px auto;
+  background: rgba(0,0,0,.8);
+}
+header h1 div .listen-con .con2-top{
+  width: 96%;
+  height: 190px;
+  margin: 0 auto;
+  border-bottom: 1px solid #292A25;
+}
+header h1 div .listen-con .con2-top ul{
+  width: 96%;
+  margin: 0 auto;
+  position: relative;
+}
+header h1 div .listen-con .con2-top ul .top-1{
+  width: 30%;
+  height: 90px;
+  position: absolute;
+  left: 0;
+}
+header h1 div .listen-con .con2-top ul .top-1 a p{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #CACAC2;
+  border-radius: 50%;
+  margin-left: 40%;
+}
+header h1 div .listen-con .con2-top ul .top-1 .you{
+  width: 25px;
+  height: 25px;
+  margin-left: -7%;
+  margin-top: 12px;
+}
+header h1 div .listen-con .con2-top ul .top-1 a h4{
+  width: 65px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: -5px;
+}
+header h1 div .listen-con .con2-top ul .top-2{
+  width: 30%;
+  height: 90px;
+  position: absolute;
+  left: 36%;
+}
+header h1 div .listen-con .con2-top ul .top-2 a p{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #CACAC2;
+  border-radius: 50%;
+  margin-left: 40%;
+}
+header h1 div .listen-con .con2-top ul .top-2 .list{
+  width: 25px;
+  height: 25px;
+  margin-left: -7%;
+  margin-top: 12px;
+}
+header h1 div .listen-con .con2-top ul .top-2 a h4{
+  width: 65px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: -5px;
+}
+header h1 div .listen-con .con2-top ul .top-3{
+  width: 30%;
+  height: 90px;
+  position: absolute;
+  left: 70%;
+}
+header h1 div .listen-con .con2-top ul .top-3 a p{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #CACAC2;
+  border-radius: 50%;
+  margin-left: 40%;
+}
+header h1 div .listen-con .con2-top ul .top-3 .radio{
+  width: 25px;
+  height: 25px;
+  margin-left: 0;
+  margin-top: 12px;
+}
+header h1 div .listen-con .con2-top ul .top-3 a h4{
+  width: 65px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: -5px;
+}
+header h1 div .listen-con .con2-top ul .top-4{
+  width: 30%;
+  height: 90px;
+  position: absolute;
+  left: 0;
+  top: 90px;
+}
+header h1 div .listen-con .con2-top ul .top-4 a p{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #CACAC2;
+  border-radius: 50%;
+  margin-left: 40%;
+}
+header h1 div .listen-con .con2-top ul .top-4 .guess{
+  width: 25px;
+  height: 25px;
+  margin-left: 0;
+  margin-top: 12px;
+}
+header h1 div .listen-con .con2-top ul .top-4 a h4{
+  width: 65px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: -5px;
+}
+header h1 div .listen-con .con2-top ul .top-5{
+  width: 30%;
+  height: 90px;
+  position: absolute;
+  left: 36%;
+  top: 90px;
+}
+header h1 div .listen-con .con2-top ul .top-5 a p{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #CACAC2;
+  border-radius: 50%;
+  margin-left: 40%;
+}
+header h1 div .listen-con .con2-top ul .top-5 .day{
+  width: 25px;
+  height: 25px;
+  margin-left: 0;
+  margin-top: 12px;
+}
+header h1 div .listen-con .con2-top ul .top-5 a h4{
+  width: 65px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: -5px;
+}
+header h1 div .listen-con .con2-top ul .top-6{
+  width: 30%;
+  height: 90px;
+  position: absolute;
+  left: 70%;
+  top: 90px;
+}
+header h1 div .listen-con .con2-top ul .top-6 a p{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #CACAC2;
+  border-radius: 50%;
+  margin-left: 40%;
+}
+header h1 div .listen-con .con2-top ul .top-6 .circle{
+  width: 25px;
+  height: 25px;
+  margin-left: 0;
+  margin-top: 12px;
+}
+header h1 div .listen-con .con2-top ul .top-6 a h4{
+  width: 65px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: -5px;
+}
+header h1 div .listen-con .con2-bottom{
+  width: 96%;
+  height: 50px;
+  margin: 0 auto;
+  border-bottom: 1px solid #292A25;
+}
+header h1 div .listen-con .con2-bottom img{
+  width: 23px;
+  position: relative;
+  left: -40%;
+  top: 10px;
+}
+header h1 div .listen-con .con2-bottom p{
+  position: relative;
+  left: -30%;
+  top: -35px;
+  font-size: 13px;
+}
+header h1 div .listen-con .con2-bottom #scrollnews{
+  width: 65%;
+  height:20px;
+  line-height:20px;
+  overflow:hidden;
+  position: relative;
+  top: -65px;
+  left: 31%;
+  font-size: 10px;
+  font-weight: 100;
+  text-align: right;
+}
+header h1 div .listen-con .con2-bottom #scrollnews a.scroll{
+  width: 100%;
+  height: 25px;
+  overflow:hidden;
+  margin-top: 10px;
+  line-height: 25px;
+  position: relative;
+}
+header h1 div #look-con{
+  width: 100%;
+  height: 2000px;
+  overflow-y: scroll;
+  z-index: 0;
+}
+header h1 div #look-con #tab{
+  width: 100%;
+  height: 43px;
+  background: rgba(0,0,0,.8);
+  border-bottom: 1px solid #292A25;
+}
+header h1 div #look-con span{
+  padding: 15px 10.7%;
+  font-size: 15px;
+}
+header h1 div #look-con span.true{
+  color: #FFC3AE;
+  font-size: 15px;
+  border-bottom: 2px solid #FFC3AE;
+  padding-bottom: 13px;
+  cursor: pointer;
+}
+header h1 div #look-con ol{
+  width: 100%;
+  height: 600px;
+  margin-top: 0px;
+  display: none;
+  background: rgba(0,0,0,.8);
+  overflow-y: scroll;
+}
+header h1 div #look-con ol.true{
+  display: block;
+}
+header h1 div #look-con .look-header{
+  width: 96%;
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+}
+header h1 div #look-con .look-header h4{
+  width: 30%;
+  font-size: 15px;
+  position: absolute;
+  left: 3%;
+  top: 0;
+  text-align: left;
+}
+header h1 div #look-con .look-header h5{
+  width: 50%;
+  font-size: 10px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+header h1 div #look-con .look-header p{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+}
+header h1 div #loook-con .look-header p img{
+  width: 100%;
+  height: 100%;
+}
+header h1 div #look-con .look-header .king1{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 61%; 
+  top: -2px;
+}
+header h1 div #look-con .look-header .king2{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 73%; 
+  top: -2px;
+}
+header h1 div #look-con .look-header .king3{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 85%; 
+  top: -2px;
+}
+header h1 div #look-con .look-header span a img{
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  left: 277px;
+  top: 10px;
+}
+header h1 div #look-con .look-list{
+  width: 100%;
+  height: 90px;
+  margin-top: 10px;
+  position: relative;
+}
+header h1 div #look-con .look-list .list-1{
+  width: 20%;
+  height: 90px;
+  position: absolute;
+}
+header h1 div #look-con .look-list .list-1 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #FD8764;
+}
+header h1 div #look-con .look-list .list-1 .show{
+  width: 35px;
+  height: 35px;
+  margin-top: 4px;
+  margin-left: -2px;
+} 
+header h1 div #look-con .look-list .list-1 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+}
+header h1 div #look-con .look-list .list-2{
+  width: 20%;
+  height: 90px;
+  position: absolute;
+  left: 20%;
+}
+header h1 div #look-con .look-list .list-2 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #FFCD33;
+}
+header h1 div #look-con .look-list .list-2 .loc{
+  width: 30px;
+  height: 30px;
+  margin-top: 6px;
+  margin-left: -5px;
+} 
+header h1 div #look-con .look-list .list-2 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -7px;
+}
+header h1 div #look-con .look-list .list-3{
+  width: 20%;
+  height: 90px;
+  position: absolute;
+  left: 40%;
+}
+header h1 div #look-con .look-list .list-3 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #53D5F9;
+}
+header h1 div #look-con .look-list .list-3 .voice{
+  width: 35px;
+  height: 35px;
+  margin-top: 4px;
+  margin-left: -2px;
+} 
+header h1 div #look-con .look-list .list-3 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+}
+header h1 div #look-con .look-list .list-4{
+  width: 20%;
+  height: 90px;
+  position: absolute;
+  left: 60%;
+}
+header h1 div #look-con .look-list .list-4 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #D584DE;
+}
+header h1 div #look-con .look-list .list-4 .sear{
+  width: 28px;
+  height: 28px;
+  margin-top: 8px;
+  margin-left: -2px;
+} 
+header h1 div #look-con .look-list .list-4 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -7px;
+}
+header h1 div #look-con .look-list .list-5{
+  width: 20%;
+  height: 90px;
+  position: absolute;
+  left: 80%;
+}
+header h1 div #look-con .look-list .list-5 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #A5D831;
+}
+header h1 div #look-con .look-list .list-5 .my{
+  width: 30px;
+  height: 30px;
+  margin-top: 6px;
+  margin-left: -3px;
+} 
+header h1 div #look-con .look-list .list-5 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -7px;
+}
+header h1 div #look-con .look-video{
+  width: 100%;
+  height: 1360px;
+  position: relative;
+}
+/*-----统一设置look-video下的图片和字体大小-------*/
+header h1 div #look-con .look-video img{
+  width: 100%;
+  height: 83%;
+}
+header h1 div #look-con .look-video h3{
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -10px;
+}
+header h1 div #look-con .look-video h4{
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+  text-align: left;
+}
+header h1 div #look-con .look-video h6{
+  height: 20px;
+  line-height: 20px;
+  font-size: 7px;
+  text-align: left;
+}
+header h1 div #look-con .look-video .d1{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+header h1 div #look-con .look-video .d2{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 50.5%;
+  top: 0;
+}
+header h1 div #look-con .look-video .d3{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 170px;
+}
+header h1 div #look-con .look-video .d4{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 50.5%;
+  top: 170px;
+}
+header h1 div #look-con .look-video .d5{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 340px;
+}
+header h1 div #look-con .look-video .d6{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 50.5%;
+  top: 340px;
+}
+header h1 div #look-con .look-video .d7{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 510px;
+}
+header h1 div #look-con .look-video .d8{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 50.5%;
+  top: 510px;
+}
+header h1 div #look-con .look-video .d9{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 680px;
+}
+header h1 div #look-con .look-video .d10{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 50.5%;
+  top: 680px;
+}
+header h1 div #look-con .look-video .d11{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 850px;
+}
+header h1 div #look-con .look-video .d12{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 50.5%;
+  top: 850px;
+}
+header h1 div #look-con .look-video .d13{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 1020px;
+}
+header h1 div #look-con .look-video .d14{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 50.5%;
+  top: 1020px;
+}
+/* header h1 div #look-con .list-radio .d15{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 0;
+  top: 1290px;
+}
+header h1 div #look-con .list-radio .d16{
+  width: 49.5%;
+  height: 170px;
+  position: absolute;
+  left: 50.5%;
+  top: 1290px;
+} */
+header h1 div #look-con .list-radio{
+  width: 100%;
+  height: 90px;
+  margin-top: 10px;
+  position: relative;
+  overflow-y: scroll;
+}
+header h1 div #look-con .list-radio .radio-1{
+  width: 25%;
+  height: 90px;
+  position: absolute;
+  margin-left: 10px;
+}
+header h1 div #look-con .list-radio .radio-1 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #FFD042;
+}
+header h1 div #look-con .list-radio .radio-1 .loc{
+  width: 31px;
+  height: 31px;
+  margin-top: 6px;
+  margin-left: -4px;
+} 
+header h1 div #look-con .list-radio .radio-1 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+}
+header h1 div #look-con .list-radio .radio-2{
+  width: 25%;
+  height: 90px;
+  position: absolute;
+  left: 25%;
+  margin-left: 5px;
+}
+header h1 div #look-con .list-radio .radio-2 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #5EDAFE;
+}
+header h1 div #look-con .list-radio .radio-2 .new{
+  width: 37px;
+  height: 30px;
+  margin-top: 6px;
+  margin-left: -2px;
+} 
+header h1 div #look-con .list-radio .radio-2 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+}
+header h1 div #look-con .list-radio .radio-3{
+  width: 25%;
+  height: 90px;
+  position: absolute;
+  left: 50%;
+  margin-left: 5px;
+}
+header h1 div #look-con .list-radio .radio-3 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #36E5D4;
+}
+header h1 div #look-con .list-radio .radio-3 .topic{
+  width: 28px;
+  height: 28px;
+  margin-top: 7px;
+  margin-left: -5px;
+} 
+header h1 div #look-con .list-radio .radio-3 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+}
+header h1 div #look-con .list-radio .radio-4{
+  width: 25%;
+  height: 90px;
+  position: absolute;
+  left: 75%;
+}
+header h1 div #look-con .list-radio .radio-4 a{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background: #FD8862;
+}
+header h1 div #look-con .list-radio .radio-4 .care{
+  width: 26px;
+  height: 26px;
+  margin-top: 10px;
+  margin-left: -5px;
+} 
+header h1 div #look-con .list-radio .radio-4 a span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+}
+header h1 div #look-con .radio-play{
+  width: 100%;
+  height: 2290px;
+  position: relative;
+}
+/*-----统一设置radio-play下的图片和字体大小-------*/
+header h1 div #look-con .radio-play img{
+  width: 100%;
+  height: 70%;
+}
+header h1 div #look-con .radio-play img.good{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+}
+header h1 div #look-con .radio-play img.play{
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  left: 40%;
+  bottom: 3px;
+}
+header h1 div #look-con .radio-play h4{
+  font-size: 6px;
+  width: 50px;
+  height: 10px;
+  line-height: 10px;
+  position: absolute;
+  left: 8%;
+  bottom: 8px;
+}
+header h1 div #look-con .radio-play h5{
+  font-size: 6px;
+  width: 50px;
+  height: 10px;
+  line-height: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+}
+header h1 div #look-con .radio-play h3{
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -10px;
+}
+header h1 div #look-con .radio-play .p1{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+header h1 div #look-con .radio-play .p2{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 50.5%;
+  top: 0;
+}
+header h1 div #look-con .radio-play .p3{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 0;
+  top: 265px;
+}
+header h1 div #look-con .radio-play .p4{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 50.5%;
+  top: 265px;
+}
+header h1 div #look-con .radio-play .p5{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 0;
+  top: 530px;
+}
+header h1 div #look-con .radio-play .p6{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 50.5%;
+  top: 530px;
+}
+header h1 div #look-con .radio-play .p7{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 0;
+  top: 795px;
+}
+header h1 div #look-con .radio-play .p8{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 50.5%;
+  top: 795px;
+}
+header h1 div #look-con .radio-play .p9{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 0;
+  top: 1060px;
+}
+header h1 div #look-con .radio-play .p10{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 50.5%;
+  top: 1060px;
+}
+header h1 div #look-con .radio-play .p11{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 0;
+  top: 1325px;
+}
+header h1 div #look-con .radio-play .p12{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 50.5%;
+  top: 1325px;
+}
+header h1 div #look-con .radio-play .p13{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 0;
+  top: 1590px;
+}
+header h1 div #look-con .radio-play .p14{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 50.5%;
+  top: 1590px;
+}
+header h1 div #look-con .radio-play .p15{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 0;
+  top: 1855px;
+}
+header h1 div #look-con .radio-play .p16{
+  width: 49.5%;
+  height: 265px;
+  position: absolute;
+  left: 50.5%;
+  top: 1855px;
+}
+header h1 div #look-con .mv-list{
+  width: 100%;
+  height: 50px;
+}
+header h1 div #look-con .mv-list .fl{
+  width: 20%;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFC3AE;
+  font-size: 10px;
+  border: 1px solid #FFC3AE;
+  border-radius: 5px;
+  margin-top: 14px;
+  margin-left: 2%;
+}
+header h1 div #look-con .sort{
+  width: 100%;
+  height: 150px;
+  background: #ccf;
+  display: none;
+}
+header h1 div #look-con .sort li{
+  width: 22%;
+  height: 35px;
+  font-size: 10px;
+  color: #fff;
+  line-height: 35px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 2%;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  float: left;
+}
+header h1 div #look-con .mv-list .fr{
+  width: 20%;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFC3AE;
+  font-size: 14px;
+  margin-right: 2%;
+  margin-top: 14px;
+}
+header h1 div #look-con .mv{
+  width: 100%;
+  height: 1430px;
+  overflow-y: scroll;
+  position: relative;
+}
+header h1 div #look-con .mv img{
+  width: 100%;
+  height: 80%;
+}
+header h1 div #look-con .mv img.good{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+}
+header h1 div #look-con .mv img.play{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 53%;
+  bottom: 7px;
+}
+header h1 div #look-con .mv h4{
+  font-size: 6px;
+  width: 50px;
+  height: 10px;
+  line-height: 10px;
+  position: absolute;
+  left: 7%;
+  bottom: 9px;
+}
+header h1 div #look-con .mv h5{
+  font-size: 6px;
+  width: 50px;
+  height: 10px;
+  line-height: 10px;
+  position: absolute;
+  left: 59%;
+  bottom: 9px;
+}
+header h1 div #look-con .mv h3{
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -10px;
+}
+header h1 div #look-con .mv1{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header h1 div #look-con .mv2{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  left: 50.5%;
+}
+header h1 div #look-con .mv3{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 140px;
+  left: 0;
+}
+header h1 div #look-con .mv4{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 140px;
+  left: 50.5%;
+}
+header h1 div #look-con .mv5{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 280px;
+  left: 0;
+}
+header h1 div #look-con .mv6{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 280px;
+  left: 50.5%;
+}
+header h1 div #look-con .mv7{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 420px;
+  left: 0;
+}
+header h1 div #look-con .mv8{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 420px;
+  left: 50.5%;
+}
+header h1 div #look-con .mv9{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 560px;
+  left: 0;
+}
+header h1 div #look-con .mv10{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 560px;
+  left: 50.5%;
+}
+header h1 div #look-con .mv11{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 700px;
+  left: 0;
+}
+header h1 div #look-con .mv12{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 700px;
+  left: 50.5%;
+}
+header h1 div #look-con .mv13{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 840px;
+  left: 0;
+}
+header h1 div #look-con .mv14{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 840px;
+  left: 50.5%;
+}
+header h1 div #look-con .mv15{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 980px;
+  left: 0;
+}
+header h1 div #look-con .mv16{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 980px;
+  left: 50.5%;
+}
+header h1 div #look-con .mv17{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 1120px;
+  left: 0;
+}
+header h1 div #look-con .mv18{
+  width: 49.5%;
+  height: 140px;
+  position: absolute;
+  top: 1120px;
+  left: 50.5%;
+}
+header h1 div .sing-con{
+  width: 100%;
+  height: 485px;
+  background: rgba(0,0,0,.8);
+  z-index: 0;
+  overflow-y: scroll;
+}
+header h1 div .sing-con .box_img{
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
+} 
+header h1 div .sing-con .box_img li{
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+header h1 div .sing-con .box_img li img{
+  width: 320px;
+  height: 100px;
+  position: absolute;
+  top: -13px;
+  left: -10px;
+}
+header h1 div .sing-con .sing-list{
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+header h1 div .sing-con .sing-list .list-1{
+  width: 25%;
+  height: 100px;
+  position: absolute;
+  left: 5%;
+}
+header h1 div .sing-con .sing-list .list-1 a{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 5px;
+  border: 1px solid #eee;
+}
+header h1 div .sing-con .sing-list .list-1 .care{
+  width: 23px;
+  height: 23px;
+  margin-top: 14px;
+  margin-left: 4px;
+} 
+header h1 div .sing-con .sing-list .list-1 span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  display: inline-block;
+}
+header h1 div .sing-con .sing-list .list-2{
+  width: 25%;
+  height: 100px;
+  position: absolute;
+  left: 38%;
+}
+header h1 div .sing-con .sing-list .list-2 a{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 5px;
+  border: 1px solid #eee;
+}
+header h1 div .sing-con .sing-list .list-2 .sing{
+  width: 23px;
+  height: 23px;
+  margin-top: 13px;
+  margin-left: 5px;
+} 
+header h1 div .sing-con .sing-list .list-2 span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  display: inline-block;
+}
+header h1 div .sing-con .sing-list .list-3{
+  width: 25%;
+  height: 100px;
+  position: absolute;
+  left: 69%;
+}
+header h1 div .sing-con .sing-list .list-3 a{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 5px;
+  border: 1px solid #eee;
+}
+header h1 div .sing-con .sing-list .list-3 .my{
+  width: 23px;
+  height: 23px;
+   margin-top: 13px;
+  margin-left: 4px; 
+} 
+header h1 div .sing-con .sing-list .list-3 span.til{
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  display: inline-block;
+}
+header h1 div .sing-con .near,header h1 div .sing-con .kg,header h1 div .sing-con .lt{
+  width: 100%;
+  height: 140px;
+  margin-top: 10px;
+  position: relative;
+}
+header h1 div .sing-con .near .nearpic,header h1 div .sing-con .kg .kgpic,header h1 div .sing-con .lt .ltpic{
+  width: 103px;
+  height: 103px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-radius: 2px;
+}
+header h1 div .sing-con .near h4,header h1 div .sing-con .kg h4,header h1 div .sing-con .lt h4{
+  font-size: 6px;
+  width: 100px;
+  height: 10px;
+  line-height: 10px;
+  position: absolute;
+  top: 100px;
+  text-align: left;
+}
+header h1 div .sing-con .near h5,header h1 div .sing-con .kg h5,header h1 div .sing-con .lt h5{
+  font-size: 6px;
+  width: 100px;
+  height: 10px;
+  line-height: 8px;
+  position: absolute;
+  top: 119px;
+  text-align: left;
+}
+header h1 div .sing-con .near .near-1,header h1 div .sing-con .kg .kg-1,header h1 div .sing-con .lt .lt-1{
+  width: 32%;
+  height: 150px;
+  position: absolute;
+  left: 1%;
+}
+header h1 div .sing-con .near .near-2,header h1 div .sing-con .kg .kg-2,header h1 div .sing-con .lt .lt-2{
+  width: 32%;
+  height: 150px;
+  position: absolute;
+  left: 34%;
+}
+header h1 div .sing-con .near .near-3,header h1 div .sing-con .kg .kg-3,header h1 div .sing-con .lt .lt-3{
+  width: 32%;
+  height: 150px;
+  position: absolute;
+  left: 67%;
+}
+footer {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin-top: -50px;
+  background: rgba(0, 0, 0, 1);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+footer .pic{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  position: relative;
+  top: -10px;
+  left: 10px;
+}
+footer .pic img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+footer .info{
+  width: 200px;
+  height: 40px;
+  position: relative;
+}
+footer .info .play{
+  width: 230px;
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  top: -45px;
+  left: 80px;
+}
+footer .info .play p{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #FFC3AE;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 1px;
+}
+footer .info  #musicAudio{
+  position: relative;
+  top: -30px;
+}
+footer .info #progressBar{
+  width: 230px; 
+  height: 2px; 
+  background: #ccc; 
+  position: absolute; 
+  top: -17px; 
+  left: 80px;
+}
+footer .info #progress{
+  width: 4px; 
+  height: 4px; 
+  border-radius: 50%; 
+  background: #FFC3AE; 
+  position: absolute; 
+  top: -1px; 
+  left: 1px;
+}
+footer .info #musicAudio p{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+footer .info  #musicAudio #music_wrapper{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 220px;
+}
+footer .info #musicAudio #music_wrapper{
+  width: 20px;
+  height: 20px;
+}
+footer .info .next{
+  width: 30px;
+  height: 30px;
+  background: url(../icon/nextone.png) no-repeat;
+  background-size: 16px 16px;
+  position: absolute;
+  top: -29px;
+  left: 260px;
+}
+footer .info .list{
+  width: 30px;
+  height: 30px;
+  background: url(../icon/listm.png) no-repeat;
+  background-size: 22px 22px;
+  position: absolute;
+  top: -32px;
+  left: 290px;
+}
+footer .info .title{
+  width: 120px;
+  height: 20px;
+  position: absolute;
+  top: -55px;
+  left: 80px;
+}
+footer .info .name{
+  width: 100px;
+  height: 20px;
+  font-size: 6px;
+  position: absolute;
+  top: -40px;
+  left: 45px;
+}
+
+/*------mobile-------*/
+@media only screen and (min-width: 375px) {
+  aside.slide-wrapper li > a {padding: 14px 14px; box-sizing: border-box;}
+  aside.slide-wrapper .bottom li a{width: 46%;}
+  aside.slide-wrapper div div.nickname li.name{margin-top: -55px; margin-left: 20px;}
+  aside.slide-wrapper div div.nickname li.lv{margin-left: 20px;}
+  aside.slide-wrapper li > a img{margin-left: 3%;}
+  aside.slide-wrapper li > a p{margin-left: 30%;}
+  aside.slide-wrapper .bottom li{margin-left: 2%;}
+  aside.slide-wrapper .bottom li a p{margin-left: 40%;}
+  header h1 div .listen-con .con1-top ul span img.mic{left: 260px;}
+  header h1 div .listen-con .con1-top ul span font{left: 295px;}
+  header h1 div .listen-con .con1-top ul span img.new{left: 300px;}
+  header h1 div .listen-con .con2-top ul .top-2{left: 37%;}
+  header h1 div .listen-con .con2-top ul .top-3{left: 74%;}
+  header h1 div .listen-con .con2-top ul .top-5{left: 37%;}
+  header h1 div .listen-con .con2-top ul .top-6{left: 74%;}
+  header h1 div .listen-con .con2{height: 387px;}
+  header h1 div #look-con .look-header span a img{left: 325px;}
+  header h1 div #look-con .look-header h5{left: -3%;}
+  header h1 div #look-con .look-header .king1{top: -2px; left: 60%;}
+  header h1 div #look-con .look-header .king2{top: -2px; left: 72%;}
+  header h1 div #look-con .look-header .king3{top: -2px; left: 84.5%;}
+  header h1 div #look-con .look-list .list-1{left: 10px;}
+  header h1 div #look-con .look-list .list-2{margin-left: 7px;}
+  header h1 div #look-con .look-list .list-3{margin-left: 7px;}
+  header h1 div #look-con .look-list .list-4{margin-left: 7px;}
+  header h1 div #look-con .look-video{height: 1400px;}
+  header h1 div #look-con .look-video .d3{top: 190px;}
+  header h1 div #look-con .look-video .d4{top: 190px;}
+  header h1 div #look-con .look-video .d5{top: 380px;}
+  header h1 div #look-con .look-video .d6{top: 380px;}
+  header h1 div #look-con .look-video .d7{top: 570px;}
+  header h1 div #look-con .look-video .d8{top: 570px;}
+  header h1 div #look-con .look-video .d9{top: 760px;}
+  header h1 div #look-con .look-video .d10{top: 760px;}
+  header h1 div #look-con .look-video .d11{top: 950px;}
+  header h1 div #look-con .look-video .d12{top: 950px;}
+  header h1 div #look-con .look-video .d13{top: 1140px;}
+  header h1 div #look-con .look-video .d14{top: 1140px;}
+  /* header h1 div #look-con .look-video .d15{top: 1330px;}
+  header h1 div #look-con .look-video .d16{top: 1330px;} */
+  header h1 div #look-con .list-radio .radio-1{margin-left: 20px;}
+  header h1 div #look-con .list-radio .radio-2{margin-left: 15px;}
+  header h1 div #look-con .list-radio .radio-3{margin-left: 13px;}
+  header h1 div #look-con .list-radio .radio-4{margin-left: 13px;}
+  header h1 div #look-con .radio-play{height: 2510px;}
+  header h1 div #look-con .radio-play img.play{bottom: -32px;}
+  header h1 div #look-con .radio-play h4{bottom: -30px;}
+  header h1 div #look-con .radio-play h5{bottom: -30px;}
+  header h1 div #look-con .radio-play .p3{top: 305px;}
+  header h1 div #look-con .radio-play .p4{top: 305px;}
+  header h1 div #look-con .radio-play .p5{top: 610px;}
+  header h1 div #look-con .radio-play .p6{top: 610px;}
+  header h1 div #look-con .radio-play .p7{top: 915px;}
+  header h1 div #look-con .radio-play .p8{top: 915px;}
+  header h1 div #look-con .radio-play .p9{top: 1220px;}
+  header h1 div #look-con .radio-play .p10{top: 1220px;}
+  header h1 div #look-con .radio-play .p11{top: 1525px;}
+  header h1 div #look-con .radio-play .p12{top: 1525px;}
+  header h1 div #look-con .radio-play .p13{top: 1830px;}
+  header h1 div #look-con .radio-play .p14{top: 1830px;}
+  header h1 div #look-con .radio-play .p15{top: 2135px;}
+  header h1 div #look-con .radio-play .p16{top: 2135px;}
+  header h1 div #look-con .mv{height: 1470px;}
+  header h1 div #look-con .mv img.play{width: 20px; bottom: -7px;}
+  header h1 div #look-con .mv h4{bottom: -6px;}
+  header h1 div #look-con .mv h5{bottom: -6px;}
+  header h1 div #look-con .mv3{top: 155px;}
+  header h1 div #look-con .mv4{top: 155px;}
+  header h1 div #look-con .mv5{top: 310px;}
+  header h1 div #look-con .mv6{top: 310px;}
+  header h1 div #look-con .mv7{top: 465px;}
+  header h1 div #look-con .mv8{top: 465px;}
+  header h1 div #look-con .mv9{top: 620px;}
+  header h1 div #look-con .mv10{top: 620px;}
+  header h1 div #look-con .mv11{top: 775px;}
+  header h1 div #look-con .mv12{top: 775px;}
+  header h1 div #look-con .mv13{top: 930px;}
+  header h1 div #look-con .mv14{top: 930px;}
+  header h1 div #look-con .mv15{top: 1085px;}
+  header h1 div #look-con .mv16{top: 1085px;}
+  header h1 div #look-con .mv17{top: 1240px;}
+  header h1 div #look-con .mv18{top: 1240px;}
+  header h1 div .sing-con{height: 578px;}
+  header h1 div .sing-con .box_img li img{width: 375px; height: 120px; top: -13px;}
+  header h1 div .sing-con .sing-list{margin-top: 20px;}
+  header h1 div .sing-con .sing-list .list-1{left: 5%;}
+  header h1 div .sing-con .sing-list .list-2{left: 40%;}
+  header h1 div .sing-con .sing-list .list-3{left: 75%;}
+  header h1 div .sing-con .near,header h1 div .sing-con .kg,header h1 div .sing-con .lt{height: 160px;}
+  header h1 div .sing-con .near .nearpic,header h1 div .sing-con .kg .kgpic,header h1 div .sing-con .lt .ltpic{width: 120px;height: 120px; border-radius: 4px;}
+  header h1 div .sing-con .near h4,header h1 div .sing-con .kg h4,header h1 div .sing-con .lt h4{top: 120px;}
+  header h1 div .sing-con .near h5,header h1 div .sing-con .kg h5,header h1 div .sing-con .lt h5{top: 140px;}
+  header h1 div .sing-con .near .near-1,header h1 div .sing-con .kg .kg-1,header h1 div .sing-con .lt .lt-1{left: 1%;}
+  header h1 div .sing-con .near .near-2,header h1 div .sing-con .kg .kg-2,header h1 div .sing-con .lt .lt-2{left: 35%;}
+  header h1 div .sing-con .near .near-3,header h1 div .sing-con .kg .kg-3,header h1 div .sing-con .lt .lt-3{left: 68%;}
+  footer .info .play{width: 280px;}
+  footer .info  #musicAudio #music_wrapper{left: 260px;}
+  footer .info #progressBar{width: 280px;}
+  footer .info .next{left: 300px;}
+  footer .info .list{left: 340px;}
+}
+@media only screen and (min-width: 414px) {
+  aside.slide-wrapper div div{height: 100px;}
+  aside.slide-wrapper div div.avatar{padding-top: 25px;}
+  aside.slide-wrapper > div > div .avatar img{width: 60px; height: 60px;}
+  aside.slide-wrapper div div.nickname li.name{margin-top: -70px; margin-left: 20px;}
+  aside.slide-wrapper div div.nickname li.lv{margin-left: 20px;}
+  aside.slide-wrapper li > a {padding: 13px 13px; box-sizing: border-box;}
+  aside.slide-wrapper li > a img{margin-left: 4%;}
+  aside.slide-wrapper li > a p{height:20px;  margin-left: 25%; font-size: 20px; line-height: 5px; margin-top: -20px; }
+  aside.slide-wrapper .bottom li{margin-left: 2%;}
+  aside.slide-wrapper .bottom li a p{margin-left: 50px; margin-top: -25px;}
+  aside.slide-wrapper .bottom li a img{width: 30px; margin-top: 10px;} 
+  header h1 div .listen-con .con1-top ul span img.mic{left: 290px;}
+  header h1 div .listen-con .con1-top ul span font{left: 325px;}
+  header h1 div .listen-con .con1-top ul span img.new{left: 330px;}
+  header h1 div .listen-con .con1-bottom ul .bottom-2{left: 30%;}
+  header h1 div .listen-con .con1-bottom ul .bottom-3{left: 55%;}
+  header h1 div .listen-con .con1-bottom ul .bottom-4{left: 80%;}
+  header h1 div .listen-con .con2-top ul .top-1{left: 2%;}
+  header h1 div .listen-con .con2-top ul .top-2{left: 39%;}
+  header h1 div .listen-con .con2-top ul .top-3{left: 77%;}
+  header h1 div .listen-con .con2-top ul .top-4{left: 2%;}
+  header h1 div .listen-con .con2-top ul .top-5{left: 39%;}
+  header h1 div .listen-con .con2-top ul .top-6{left: 77%;}
+  header h1 div .listen-con .con2{height: 455px;}
+  header h1 div #look-con ol{height: 2920px;}
+  header h1 div #look-con .look-header span a img{left: 360px;}
+  header h1 div #look-con .look-header h5{left: -4.5%;}
+  header h1 div #look-con .look-header .king1{top: -2px; left: 60%;}
+  header h1 div #look-con .look-header .king2{top: -2px; left: 72.5%;}
+  header h1 div #look-con .look-header .king3{top: -2px; left: 84%;}
+  header h1 div #look-con .look-list .list-1{left: 10px;}
+  header h1 div #look-con .look-list .list-2{margin-left: 7px;}
+  header h1 div #look-con .look-list .list-3{margin-left: 7px;}
+  header h1 div #look-con .look-list .list-4{margin-left: 7px;}
+  header h1 div #look-con .look-video .d3{top: 200px;}
+  header h1 div #look-con .look-video .d4{top: 200px;}
+  header h1 div #look-con .look-video .d5{top: 400px;}
+  header h1 div #look-con .look-video .d6{top: 400px;}
+  header h1 div #look-con .look-video .d7{top: 600px;}
+  header h1 div #look-con .look-video .d8{top: 600px;}
+  header h1 div #look-con .look-video .d9{top: 800px;}
+  header h1 div #look-con .look-video .d10{top: 800px;}
+  header h1 div #look-con .look-video .d11{top: 1000px;}
+  header h1 div #look-con .look-video .d12{top: 1000px;}
+  header h1 div #look-con .look-video .d13{top: 1200px;}
+  header h1 div #look-con .look-video .d14{top: 1200px;}
+  /* header h1 div #look-con .look-video .d15{top: 1400px;}
+  header h1 div #look-con .look-video .d16{top: 1400px;} */
+  header h1 div #look-con .radio-play{height: 4000px;}
+  header h1 div #look-con .radio-play img.play{bottom: -59px;}
+  header h1 div #look-con .radio-play h4{bottom: -55px;}
+  header h1 div #look-con .radio-play h5{bottom: -55px;}
+  header h1 div #look-con .radio-play .p3{top: 330px;}
+  header h1 div #look-con .radio-play .p4{top: 330px;}
+  header h1 div #look-con .radio-play .p5{top: 660px;}
+  header h1 div #look-con .radio-play .p6{top: 660px;}
+  header h1 div #look-con .radio-play .p7{top: 990px;}
+  header h1 div #look-con .radio-play .p8{top: 990px;}
+  header h1 div #look-con .radio-play .p9{top: 1320px;}
+  header h1 div #look-con .radio-play .p10{top: 1320px;}
+  header h1 div #look-con .radio-play .p11{top: 1650px;}
+  header h1 div #look-con .radio-play .p12{top: 1650px;}
+  header h1 div #look-con .radio-play .p13{top: 1980px;}
+  header h1 div #look-con .radio-play .p14{top: 1980px;}
+  header h1 div #look-con .radio-play .p15{top: 2310px;}
+  header h1 div #look-con .radio-play .p16{top: 2310px;}
+  header h1 div #look-con .mv{height: 1480px;}
+  header h1 div #look-con .mv img.play{width: 20px; bottom: -17px;}
+  header h1 div #look-con .mv h4{bottom: -16px;}
+  header h1 div #look-con .mv h5{bottom: -16px;}
+  header h1 div #look-con .mv3{top: 165px;}
+  header h1 div #look-con .mv4{top: 165px;}
+  header h1 div #look-con .mv5{top: 330px;}
+  header h1 div #look-con .mv6{top: 330px;}
+  header h1 div #look-con .mv7{top: 495px;}
+  header h1 div #look-con .mv8{top: 495px;}
+  header h1 div #look-con .mv9{top: 660px;}
+  header h1 div #look-con .mv10{top: 660px;}
+  header h1 div #look-con .mv11{top: 825px;}
+  header h1 div #look-con .mv12{top: 825px;}
+  header h1 div #look-con .mv13{top: 990px;}
+  header h1 div #look-con .mv14{top: 990px;}
+  header h1 div #look-con .mv15{top: 1155px;}
+  header h1 div #look-con .mv16{top: 1155px;}
+  header h1 div #look-con .mv17{top: 1320px;}
+  header h1 div #look-con .mv18{top: 1320px;}
+  header h1 div .sing-con{height: 645px;}
+  header h1 div .sing-con .box_img li img{width: 414px; height: 120px; top: -13px;}
+  header h1 div .sing-con .near,header h1 div .sing-con .kg,header h1 div .sing-con .lt{height: 160px;}
+  header h1 div .sing-con .near .nearpic,header h1 div .sing-con .kg .kgpic,header h1 div .sing-con .lt .ltpic{width: 125px;height: 125px; border-radius: 4px;}
+  header h1 div .sing-con .near h4,header h1 div .sing-con .kg h4,header h1 div .sing-con .lt h4{top: 120px;}
+  header h1 div .sing-con .near h5,header h1 div .sing-con .kg h5,header h1 div .sing-con .lt h5{top: 140px;}
+  header h1 div .sing-con .near .near-1,header h1 div .sing-con .kg .kg-1,header h1 div .sing-con .lt .lt-1{left: 2%;}
+  header h1 div .sing-con .near .near-2,header h1 div .sing-con .kg .kg-2,header h1 div .sing-con .lt .lt-2{left: 35%;}
+  header h1 div .sing-con .near .near-3,header h1 div .sing-con .kg .kg-3,header h1 div .sing-con .lt .lt-3{left: 68%;}
+  footer .info .play{width: 320px;}
+  footer .info  #musicAudio #music_wrapper{left: 300px;}
+  footer .info #progressBar{width: 320px;}
+  footer .info .next{left: 340px;}
+  footer .info .list{left: 380px;}
+}
+@media only screen and (min-width: 768px) {
+  body{background: url(../images/bg1.jpg) fixed no-repeat 100% 100%; background-size: 100% 100%}
+  aside.slide-wrapper > div > div{height: 130px; padding-left: 5%;}
+  aside.slide-wrapper > div > div .avatar{padding-top: 25px; box-sizing: border-box;}
+  aside.slide-wrapper > div > div .avatar img{width: 70px; height: 70px;}
+  aside.slide-wrapper > div > div .nickname{width: 200px; height: 100px; margin-left: 100px; margin-top: -65px;}
+  aside.slide-wrapper > div > div .nickname li{line-height: 30px; font-size: 20px;}
+  aside.slide-wrapper > div > div .nickname li.lv{margin-top: 10px;}
+  aside.slide-wrapper li > a {padding: 13px 13px; line-height: 18px;}
+  aside.slide-wrapper li > a img{margin-left: 6%; width: 7%;}
+  aside.slide-wrapper li > a p{height:30px; margin-left: 25%; font-size: 22px; line-height: 10px; margin-top: -20px;}
+  aside.slide-wrapper li > a span{margin-left: 30%; font-size: 22px;}
+  aside.slide-wrapper .bottom li a{width: 45%;}
+  aside.slide-wrapper .bottom li{margin-left: -3%;}
+  aside.slide-wrapper .bottom li a img{width: 20%;}
+  aside.slide-wrapper .bottom li a p{margin-left: 100px; margin-top: -35px;}
+  header h1 div .listen-con .con1-top ul span img.avatar{left: 10%;}
+  header h1 div .listen-con .con1-top ul span h4{left: 200px;}
+  header h1 div .listen-con .con1-top ul span p{left: 215px;}
+  header h1 div .listen-con .con1-top ul span h5{left: 250px;}
+  header h1 div .listen-con .con1-top ul span img.mic{left: 590px;}
+  header h1 div .listen-con .con1-top ul span font{left: 625px;}
+  header h1 div .listen-con .con1-top ul span img.new{left: 630px;}
+  header h1 div .listen-con .con1-bottom ul .bottom-2{left: 33%;}
+  header h1 div .listen-con .con1-bottom ul .bottom-3{left: 58%;}
+  header h1 div .listen-con .con1-bottom ul .bottom-4{left: 82%;}
+  header h1 div .listen-con .con2-top ul .top-1{left: 2%;}
+  header h1 div .listen-con .con2-top ul .top-2{left: 45%;}
+  header h1 div .listen-con .con2-top ul .top-3{left: 82%;}
+  header h1 div .listen-con .con2-top ul .top-4{left: 2%;}
+  header h1 div .listen-con .con2-top ul .top-5{left: 45%;}
+  header h1 div .listen-con .con2-top ul .top-6{left: 82%;}
+  header h1 div .listen-con .con2{height: 743px;}
+  header h1 div .listen-con .con2-bottom img{left: -42%;}
+  header h1 div .listen-con .con2-bottom p{left: -35%;}
+  header h1 div .listen-con .con2-bottom #scrollnews{left: 25%;}
+  header h1 div #look-con .look-header span a img{left: 700px;}
+  header h1 div #look-con .look-header h5{left: -13%;}
+  header h1 div #look-con .look-header .king1{top: -2px; left: 59%;}
+  header h1 div #look-con .look-header .king2{top: -2px; left: 70.5%;}
+  header h1 div #look-con .look-header .king3{top: -2px; left: 83%;}
+  header h1 div #look-con .look-list .list-1{left: 3.5%;}
+  header h1 div #look-con .look-list .list-2{margin-left: 7%;}
+  header h1 div #look-con .look-list .list-3{margin-left: 7%;}
+  header h1 div #look-con .look-list .list-4{margin-left: 7%;}
+  header h1 div #look-con .look-list .list-5{margin-left: 7%;}
+  header h1 div #look-con ol{height: 3420px;}
+  header h1 div #look-con .look-video .d3{top: 310px;}
+  header h1 div #look-con .look-video .d4{top: 310px;}
+  header h1 div #look-con .look-video .d5{top: 620px;}
+  header h1 div #look-con .look-video .d6{top: 620px;}
+  header h1 div #look-con .look-video .d7{top: 930px;}
+  header h1 div #look-con .look-video .d8{top: 930px;}
+  header h1 div #look-con .look-video .d9{top: 1240px;}
+  header h1 div #look-con .look-video .d10{top: 1240px;}
+  header h1 div #look-con .look-video .d11{top: 1550px;}
+  header h1 div #look-con .look-video .d12{top: 1550px;}
+  header h1 div #look-con .look-video .d13{top: 1860px;}
+  header h1 div #look-con .look-video .d14{top: 1860px;}
+  /* header h1 div #look-con .look-video .d15{top: 2170px;}
+  header h1 div #look-con .look-video .d16{top: 2170px;} */
+  header h1 div #look-con .list-radio .radio-1{margin-left: 13%;}
+  header h1 div #look-con .list-radio .radio-2{margin-left: 10%;}
+  header h1 div #look-con .list-radio .radio-3{margin-left: 8%;}
+  header h1 div #look-con .list-radio .radio-4{margin-left: 6%;}
+  header h1 div #look-con .radio-play{height: 5630px;}
+  header h1 div #look-con .radio-play img.play{bottom: -295px;}
+  header h1 div #look-con .radio-play h4{bottom: -290px; left: 4%;}
+  header h1 div #look-con .radio-play h5{bottom: -290px; left: 43%;}
+  header h1 div #look-con .radio-play .p3{top: 570px;}
+  header h1 div #look-con .radio-play .p4{top: 570px;}
+  header h1 div #look-con .radio-play .p5{top: 1140px;}
+  header h1 div #look-con .radio-play .p6{top: 1140px;}
+  header h1 div #look-con .radio-play .p7{top: 1710px;}
+  header h1 div #look-con .radio-play .p8{top: 1710px;}
+  header h1 div #look-con .radio-play .p9{top: 2280px;}
+  header h1 div #look-con .radio-play .p10{top: 2280px;}
+  header h1 div #look-con .radio-play .p11{top: 2850px;}
+  header h1 div #look-con .radio-play .p12{top: 2850px;}
+  header h1 div #look-con .radio-play .p13{top: 3420px;}
+  header h1 div #look-con .radio-play .p14{top: 3420px;}
+  header h1 div #look-con .radio-play .p15{top: 3990px;}
+  header h1 div #look-con .radio-play .p16{top: 3990px;}
+  header h1 div #look-con .mv{height: 2260px;}
+  header h1 div #look-con .mv img.play{width: 20px; bottom: -117px;}
+  header h1 div #look-con .mv h4{bottom: -114px;}
+  header h1 div #look-con .mv h5{bottom: -114px;}
+  header h1 div #look-con .mv3{top: 265px;}
+  header h1 div #look-con .mv4{top: 265px;}
+  header h1 div #look-con .mv5{top: 530px;}
+  header h1 div #look-con .mv6{top: 530px;}
+  header h1 div #look-con .mv7{top: 795px;}
+  header h1 div #look-con .mv8{top: 795px;}
+  header h1 div #look-con .mv9{top: 1060px;}
+  header h1 div #look-con .mv10{top: 1060px;}
+  header h1 div #look-con .mv11{top: 1325px;}
+  header h1 div #look-con .mv12{top: 1325px;}
+  header h1 div #look-con .mv13{top: 1590px;}
+  header h1 div #look-con .mv14{top: 1590px;}
+  header h1 div #look-con .mv15{top: 1855px;}
+  header h1 div #look-con .mv16{top: 1855px;}
+  header h1 div #look-con .mv17{top: 2120px;}
+  header h1 div #look-con .mv18{top: 2120px;}
+  header h1 div .sing-con{height: 934px;}
+  header h1 div .sing-con .box_img li img{width: 768px; height: 120px; top: -13px;}
+  header h1 div .sing-con .sing-list .list-1{left: 5%;}
+  header h1 div .sing-con .sing-list .list-2{left: 45%;}
+  header h1 div .sing-con .sing-list .list-3{left: 85%;}
+  header h1 div .sing-con .near,header h1 div .sing-con .kg,header h1 div .sing-con .lt{height: 250px;}
+  header h1 div .sing-con .near .nearpic,header h1 div .sing-con .kg .kgpic,header h1 div .sing-con .lt .ltpic{width: 203px;height: 203px; border-radius: 4px;}
+  header h1 div .sing-con .near h4,header h1 div .sing-con .kg h4,header h1 div .sing-con .lt h4{top: 200px;}
+  header h1 div .sing-con .near h5,header h1 div .sing-con .kg h5,header h1 div .sing-con .lt h5{top: 220px;}
+  header h1 div .sing-con .near .near-1,header h1 div .sing-con .kg .kg-1,header h1 div .sing-con .lt .lt-1{left: 5%;}
+  header h1 div .sing-con .near .near-2,header h1 div .sing-con .kg .kg-2,header h1 div .sing-con .lt .lt-2{left: 37%;}
+  header h1 div .sing-con .near .near-3,header h1 div .sing-con .kg .kg-3,header h1 div .sing-con .lt .lt-3{left: 68%;}
+  footer .info .play{width: 660px;}
+  footer .info  #musicAudio #music_wrapper{left: 620px;}
+  footer .info #progressBar{width: 640px;}
+  footer .info .next{left: 660px;}
+  footer .info .list{left: 700px;}
+}
+@media only screen and (min-width: 1024px) {
+  aside.slide-wrapper > div > div{height: 190px; padding-left: 4%;}
+  aside.slide-wrapper > div > div .avatar{padding-top: 40px; box-sizing: border-box;}
+  aside.slide-wrapper > div > div .avatar img{width: 100px; height: 100px;}
+  aside.slide-wrapper > div > div .nickname{width: 300px; height: 150px; margin-left: 150px; margin-top: 35px;}
+  aside.slide-wrapper > div > div .nickname li{line-height: 30px; font-size: 23px;}
+  aside.slide-wrapper > div > div .nickname li.lv{margin-top: 20px;}
+  aside.slide-wrapper li > a {padding: 16px 16px; line-height: 20px;}
+  aside.slide-wrapper li > a img{margin-left: 5%; width: 7%;}
+  aside.slide-wrapper li > a p{height:30px; margin-left: 25%; font-size: 24px; line-height: 10px; margin-top: -20px;}
+  aside.slide-wrapper .bottom li{margin-left: -1%;}
+  aside.slide-wrapper .bottom li a img{width: 20%; margin-top: 30px;}
+  aside.slide-wrapper .bottom li a p{margin-left: 40%}
+  header h1 div .listen-con .con1-top ul span img.mic{left: 790px;}
+  header h1 div .listen-con .con1-top ul span font{left: 825px;}
+  header h1 div .listen-con .con1-top ul span img.new{left: 830px;}
+  header h1 div .listen-con .con2-top ul .top-1{left: 3%;}
+  header h1 div .listen-con .con2-top ul .top-4{left: 3%;}
+  header h1 div .listen-con .con2{height: 1086px;}
+  header h1 div #look-con .look-header span a img{left: 900px;}
+  header h1 div #look-con .look-header h5{left: -15%;}
+  header h1 div #look-con .look-header .king1{top: -2px; left: 58.5%;}
+  header h1 div #look-con .look-header .king2{top: -2px; left: 70.5%;}
+  header h1 div #look-con .look-header .king3{top: -2px; left: 82.5%;}
+  header h1 div #look-con .look-list .list-1{left: 4%;}
+  header h1 div #look-con .look-list .list-2{margin-left: 7%;}
+  header h1 div #look-con .look-list .list-3{margin-left: 9%;}
+  header h1 div #look-con .look-list .list-4{margin-left: 9%;}
+  header h1 div #look-con .look-list .list-5{margin-left: 9%;}
+  header h1 div #look-con ol{height: 3620px;}
+  header h1 div #look-con .look-video .d3{top: 390px;}
+  header h1 div #look-con .look-video .d4{top: 390px;}
+  header h1 div #look-con .look-video .d5{top: 780px;}
+  header h1 div #look-con .look-video .d6{top: 780px;}
+  header h1 div #look-con .look-video .d7{top: 1170px;}
+  header h1 div #look-con .look-video .d8{top: 1170px;}
+  header h1 div #look-con .look-video .d9{top: 1560px;}
+  header h1 div #look-con .look-video .d10{top: 1560px;}
+  header h1 div #look-con .look-video .d11{top: 1950px;}
+  header h1 div #look-con .look-video .d12{top: 1950px;}
+  header h1 div #look-con .look-video .d13{top: 2340px;}
+  header h1 div #look-con .look-video .d14{top: 2340px;}
+  /* header h1 div #look-con .look-video .d15{top: 2730px;}
+  header h1 div #look-con .look-video .d16{top: 2730px;} */
+  header h1 div #look-con .list-radio .radio-1{margin-left: 13%;}
+  header h1 div #look-con .list-radio .radio-2{margin-left: 11%;}
+  header h1 div #look-con .list-radio .radio-3{margin-left: 8%;}
+  header h1 div #look-con .list-radio .radio-4{margin-left: 7;}
+  header h1 div #look-con .radio-play{height: 6640px;}
+  header h1 div #look-con .radio-play img.play{bottom: -465px;}
+  header h1 div #look-con .radio-play h4{bottom: -460px; left: 4%;}
+  header h1 div #look-con .radio-play h5{bottom: -460px; left: 43%;}
+  header h1 div #look-con .radio-play .p3{top: 740px;}
+  header h1 div #look-con .radio-play .p4{top: 740px;}
+  header h1 div #look-con .radio-play .p5{top: 1480px;}
+  header h1 div #look-con .radio-play .p6{top: 1480px;}
+  header h1 div #look-con .radio-play .p7{top: 2220px;}
+  header h1 div #look-con .radio-play .p8{top: 2220px;}
+  header h1 div #look-con .radio-play .p9{top: 2960px;}
+  header h1 div #look-con .radio-play .p10{top: 2960px;}
+  header h1 div #look-con .radio-play .p11{top: 3700px;}
+  header h1 div #look-con .radio-play .p12{top: 3700px;}
+  header h1 div #look-con .radio-play .p13{top: 4435px;}
+  header h1 div #look-con .radio-play .p14{top: 4435px;}
+  header h1 div #look-con .radio-play .p15{top: 5170px;}
+  header h1 div #look-con .radio-play .p16{top: 5170px;}
+  header h1 div #look-con .mv{height: 3800px;}
+  header h1 div #look-con .mv img.play{width: 20px; bottom: -187px;}
+  header h1 div #look-con .mv h4{bottom: -186px;}
+  header h1 div #look-con .mv h5{bottom: -186px;}
+  header h1 div #look-con .mv3{top: 340px;}
+  header h1 div #look-con .mv4{top: 340px;}
+  header h1 div #look-con .mv5{top: 680px;}
+  header h1 div #look-con .mv6{top: 680px;}
+  header h1 div #look-con .mv7{top: 1020px;}
+  header h1 div #look-con .mv8{top: 1020px;}
+  header h1 div #look-con .mv9{top: 1365px;}
+  header h1 div #look-con .mv10{top: 1365px;}
+  header h1 div #look-con .mv11{top: 1710px;}
+  header h1 div #look-con .mv12{top: 1710px;}
+  header h1 div #look-con .mv13{top: 2050px;}
+  header h1 div #look-con .mv14{top: 2050px;}
+  header h1 div #look-con .mv15{top: 2390px;}
+  header h1 div #look-con .mv16{top: 2390px;}
+  header h1 div #look-con .mv17{top: 2730px;}
+  header h1 div #look-con .mv18{top: 2730px;}
+  header h1 div .sing-con{height: 1280px;}
+  header h1 div .sing-con .box_img li img{width: 1024px; height: 120px; top: -13px;}
+  header h1 div .sing-con .near,header h1 div .sing-con .kg,header h1 div .sing-con .lt{height: 350px;}
+  header h1 div .sing-con .near .nearpic,header h1 div .sing-con .kg .kgpic,header h1 div .sing-con .lt .ltpic{width: 303px;height: 303px; border-radius: 5px;}
+  header h1 div .sing-con .near h4,header h1 div .sing-con .kg h4,header h1 div .sing-con .lt h4{top: 300px;}
+  header h1 div .sing-con .near h5,header h1 div .sing-con .kg h5,header h1 div .sing-con .lt h5{top: 320px;}
+  header h1 div .sing-con .near .near-1,header h1 div .sing-con .kg .kg-1,header h1 div .sing-con .lt .lt-1{left: 3%;}
+  header h1 div .sing-con .near .near-2,header h1 div .sing-con .kg .kg-2,header h1 div .sing-con .lt .lt-2{left: 36%;}
+  header h1 div .sing-con .near .near-3,header h1 div .sing-con .kg .kg-3,header h1 div .sing-con .lt .lt-3{left: 68%;}
+  footer .info .play{width: 900px;}
+  footer .info  #musicAudio #music_wrapper{left: 880px;}
+  footer .info #progressBar{width: 900px;}
+  footer .info .next{left: 920px;}
+  footer .info .list{left: 960px;}
+}

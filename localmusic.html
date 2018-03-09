@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>酷狗音乐</title>
+<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/localmusic.css">
+</head>
+<body>
+<!--主界面-->
+	<div id="header">
+		<a href="index.html"><div class="home"></div></a>
+		<h4>本地音乐</h4>
+		<a href=""><div class="more"></div></a>
+	</div>
+	<div id="list">
+		<span class="on">单曲<font style="font-size: 10px; margin-left: 3px;">/ 4</font></span>
+		<span>歌手<font style="font-size: 10px; margin-left: 3px;">/ 31</font></span>
+		<span>专辑<font style="font-size: 10px; margin-left: 3px;">/ 28</font></span>
+		<span>文件夹<font style="font-size: 10px; margin-left: 3px;">/ 1</font></span>
+	</div>
+	<ul class="on">
+	    <div class="top-list">
+	    	<ol class="fl">
+				<li style="border-right: 1px solid #999; padding-left: 10px; box-sizing: border-box;"><img src="icon/shunxu.png"></li>
+				<li style="padding-left: 10px; box-sizing: border-box;"><img src="icon/open.png"></li>
+			</ol>
+			<ol class="fr">
+				<li style="border-right: 1px solid #999; padding-left: 10px; box-sizing: border-box;"><img src="icon/sear.png"></li>
+				<li style="border-right: 1px solid #999; padding-left: 10px; box-sizing: border-box;"><img src="icon/sc.png"></li>
+				<li style="padding-left: 15px; box-sizing: border-box;">挑</li>
+			</ol>
+	    </div>
+	    <div class="music-list">
+	    	<ol class="list-1">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>他一定很爱你<p>MV</p></span>
+	    		    	<h5>阿杜</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-2">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Mysteries of the kingdom</span>
+	    		    	<h5>Aaron J Robinson</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-3">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Rolling in the deep<p>MV</p></span>
+	    		    	<h5>Adele</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-4">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>If you come to me<p>MV</p></span>
+	    		    	<h5>Atomic Kitten</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-5">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>The last goodbye<p>MV</p></span>
+	    		    	<h5>Atomic Kitten</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-6">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>The tide is high<p>MV</p></span>
+	    		    	<h5>Atomic Kitten</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-7">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Today my life begins<p>MV</p></span>
+	    		    	<h5>Burno Mars</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-8">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Loneliness-伴奏版</span>
+	    		    	<h5>babyface</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-9">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>追光者<p>MV</p></span>
+	    		    	<h5>岑宁儿</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-10">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Crazy</span>
+	    		    	<h5>Daniela Andrade</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-11">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Road Trip<p>MV</p></span>
+	    		    	<h5>Darin</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-12">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Love me like you do<p>MV</p></span>
+	    		    	<h5>Ellie Goulding</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-13">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Tonight Tonight<p>MV</p></span>
+	    		    	<h5>Hot Chelle Rae</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-14">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>一生所爱<p>MV</p></span>
+	    		    	<h5>吉克隽逸</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-15">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>远走高飞</span>
+	    		    	<h5>金志文、徐佳莹</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-16">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Try<p>MV</p></span>
+	    		    	<h5>Jason Marz、林俊杰</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-17">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>I am yours</span>
+	    		    	<h5>Jason Marz、林俊杰</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-18">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Lights off</span>
+	    		    	<h5>Jay Sean</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-19">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>All of me<p>MV</p></span>
+	    		    	<h5>John Legend</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-20">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Sunny Day<p>MV</p></span>
+	    		    	<h5>Joy Williams</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-21">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>As long as you love me</span>
+	    		    	<h5>Justin Bieber、Big sean</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-22">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Slow Motion<p>MV</p></span>
+	    		    	<h5>Karina Pasian</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-23">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>红颜旧<p>MV</p></span>
+	    		    	<h5>刘涛</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-24">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Better in time<p>MV</p></span>
+	    		    	<h5>Leona Lewis</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-25">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Broken</span>
+	    		    	<h5>Leona Lewis</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-26">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>消愁</span>
+	    		    	<h5>毛不易</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-27">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Croation Rhapsody</span>
+	    		    	<h5>Maksim Mrvica</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-28">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>有个爱你的人不容易<p>MV</p></span>
+	    		    	<h5>那英</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-29">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>I think of you</span>
+	    		    	<h5>Tata Young</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-30">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>Houses in the treetops</span>
+	    		    	<h5>Tomcope</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-31">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>你还要我怎样<p>MV</p></span>
+	    		    	<h5>薛之谦</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-32">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>你就不要想起我</span>
+	    		    	<h5>张杰</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-33">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>红玫瑰</span>
+	    		    	<h5>张碧晨</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-34">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="icon/add.png" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<span>She will be loved</span>
+	    		    	<h5>Maroon 5</h5>
+	    		    	<img src="icon/more.png" class="more">
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="list-35">
+	    		<a href="">
+	    		    共34首歌曲
+	    		</a>
+	    	</ol>
+	    	<div class="fixed">
+	    		<a href="">
+	    			<img src="icon/pipei.png">
+	    		</a>
+	    	</div>
+	    </div>
+	</ul>
+	<ul>
+		<div class="btn"><input type="text"></div>
+		<div class="singer">
+			<ol class="singer-1">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_50.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>阿杜</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-2">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/aron.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Aaron J Robinson</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-3">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_42.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Adele</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-4">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/adele.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Atomic Kitten</h4>
+	    		    	<h5>3首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-5">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_06.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Bruno Mars</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-6">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_08.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Babyface</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-7">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_36.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>岑宁儿</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-8">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_12.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Daniela Andrade</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-9">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_16.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Darin</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-10">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_03.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Ellie Goulding</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-11">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_20.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Hot Chelle Rae</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-12">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/jike1.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>吉克隽逸</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-13">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_28.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>金志文，徐佳莹</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-14">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_34.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Janson Marz</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-15">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/jj1.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Janson Marz,林俊杰</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-16">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_44.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Jay Sean</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-17">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_46.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Maksim Mrvica</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-18">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_40.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Maroon 5</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-19">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/naying1.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>那英</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-20">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/nan.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Tata Young</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-21">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_22.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Tomcope</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-22">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/xue1.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>薛之谦</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-23">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/zj.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>张杰</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-24">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/zbc.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>张碧晨</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-25">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_56.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Maksim Mrvica</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-26">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_54.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>John Legend</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-27">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_34.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Justin Bieber,Big Sean</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-28">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/nan.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Karina Pasian</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-29">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_56.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Leona Lewis</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-30">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/liutao1.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>刘涛</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-31">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/mao.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>毛不易</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="singer-32">
+	    		<a href="">
+	    		    共31位歌手
+	    		</a>
+	    	</ol>
+		</div>
+	</ul>
+	<ul>
+		<div class="edit">
+			<ol class="edit-1">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_28.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Feels so good</h4>
+	    		    	<h5>2首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-2">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_30.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>歌手2017 第八期</h4>
+	    		    	<h5>2首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-3">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_32.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>All of me</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-4">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_34.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>All or nothing</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-5">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_36.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Crazy</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-6">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_38.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>大话西游之爱你一万年</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-7">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/aron.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Echo</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-8">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_03.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>First love</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-9">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_06.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Flashbark</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-10">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_08.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Hello I</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-11">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_10.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>I believe</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-12">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_12.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>If you come to me</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-13">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_14.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>琅琊榜 电视剧原声带</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-14">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_40.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Mysteries of the kingdom</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-15">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_42.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Rolling in the deep</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-16">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_44.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>She will be loved</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-17">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_46.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Song from this</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-18">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_48.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Spirit</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-19">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_50.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>天黑</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-20">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_16.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Today my life begins</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-21">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_18.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Tomcope</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-22">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_20.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Try try try</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-23">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_22.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>Whatever</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-24">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_34.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>With love</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-25">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_24.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>意外</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-26">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_26.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>有个爱你的人不容易</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-27">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_46.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>追光者</h4>
+	    		    	<h5>1首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-28">
+	    		<a href="">
+	    		    <div class="fl">
+	    		    	<img src="images/1_56.jpg" class="add">
+	    		    </div>
+	    		    <div class="fr">
+	    		    	<h4>未知专辑</h4>
+	    		    	<h5>5首</h5>
+	    		    </div>
+	    		</a>
+	    	</ol>
+	    	<ol class="edit-29">
+	    		<a href="">
+	    		    共28张专辑
+	    		</a>
+	    	</ol>
+		</div>
+	</ul>
+	<ul>
+		<div class="file">
+			<ol class="file-1">
+				<a href="">
+					<div class="fl"><img src="icon/work.png"></div>
+				    <div class="fr">
+				    	<h4>酷狗音乐<p>35首</p></h4>
+				    	<h5>/storage/emulated/0/kgmusic/download/</h5>
+				    </div>
+				</a>
+			</ol>
+			<ol class="file-2">
+	    		<a href="">
+	    		    共1个文件夹
+	    		</a>
+	    	</ol>
+		</div>
+	</ul>
+
+<!--播放-->
+	<footer>
+		<div class="pic">
+			<img src="images/1_42.jpg">
+		</div>
+		<div class="info">
+			<div class="next"></div>
+			<div class="list"></div>
+			<div class="title">
+				<marquee behavior="scroll" direction="left">Rolling in the deep</marquee>
+			</div>
+			<div class="name">Adele</div>
+			<audio src="video/Adele - Rolling in the Deep.mp3" id="audio"></audio>
+			<div id="musicAudio">
+			    <img id="music_wrapper" onclick="playOrPaused(this)" src="icon/play.png">
+				<div id="progressBar">
+					<div id="progress"></div>
+				</div>
+				<p id="musicAudioTime"><span id="currentTime">00:00</span><span>&#47;</span><span id="totalTime">12:00</span></p>
+			</div>
+		</div>
+	</footer>
+<!--音乐播放进度-->
+    <script>
+    	var audio ;
+    window.onload = function(){
+        initAudio();
+    }
+    var initAudio = function(){
+        //初始化页面
+        document.getElementById("musicAudio").innerHTML=
+        "<img id='music_wrapper' onclick='playOrPaused(this)' src='icon/play.png'>"+
+        "<div id='progressBar'>"+
+        "<div id='progress'></div>"+
+        "</div>"+
+        "<p id='musicAudioTime'><span id='currentTime'>00:00</span><span>&#47;</span><span id='totalTime'>12:00</span></p>";
+        //初始化对象
+        audio = document.getElementById('audio');
+        //初始化  当前时间
+        getCurrentTime();
+        //初始化  总时间
+        var totalTime=parseInt(audio.duration/60);
+        var seconds=parseInt(audio.duration%60);
+        if(totalTime==0){
+            if(seconds>9){
+                totalTime="00:"+seconds;
+            }else{
+                totalTime="00:0"+seconds;
+            }
+        }else{
+            var totalTimePre,totalTimeNext;
+            if(totalTime>9){
+                totalTimePre=totalTime;
+            }else{
+                totalTimePre="0"+totalTime;
+            }
+            if(seconds>9){
+                totalTimeNext=seconds;
+            }else{
+                totalTimeNext="0"+seconds;
+            }
+            totalTime=totalTimePre+":"+totalTimeNext;
+        }
+        document.getElementById("totalTime").innerText=totalTime;
+    }
+    //更新进度条当前值
+    function updateProgressVal(){
+        var progressVal=audio.currentTime/audio.duration*220;
+        document.getElementById("progress").style.width=progressVal+"px";
+    }
+    //更新当前时间
+    function getCurrentTime(){
+        var currentTime=audio.currentTime;
+        var totalTime=parseInt(currentTime/60);
+        var seconds=parseInt(currentTime%60);
+        if(totalTime==0){
+            if(seconds>9){
+                totalTime="00:"+seconds;
+            }else{
+                totalTime="00:0"+seconds;
+            }
+        }else{
+            var totalTimePre,totalTimeNext;
+            if(totalTime>9){
+                totalTimePre=totalTime;
+            }else{
+                totalTimePre="0"+totalTime;
+            }
+            if(seconds>9){
+                totalTimeNext=seconds;
+            }else{
+                totalTimeNext="0"+seconds;
+            }
+            totalTime=totalTimePre+":"+totalTimeNext;
+        }
+        document.getElementById("currentTime").innerText=totalTime;
+    }
+    //暂停或播放
+    var progressTimer;
+    function playOrPaused(obj){
+        if(audio.paused){
+            audio.play();
+            progressTimer=window.setInterval(audioProgress,100);
+            document.getElementById("music_wrapper").setAttribute("src","icon/stop.png");
+            return;
+        }
+        audio.pause();
+        document.getElementById("music_wrapper").setAttribute("src","icon/play.png")
+    }
+
+    function audioProgress(){
+        if(audio.currentTime <audio.duration){
+            if(audio.played){
+                //更新当前时间
+                getCurrentTime();
+                //更新进度条
+                updateProgressVal();
+            }
+        }else{
+            clearInterval(progressTimer);
+        }
+    }
+
+    </script>
+<!--本地音乐：tab选项卡-->
+	<script>
+		var oList=document.getElementById("list");
+		var oS=oList.getElementsByTagName("span");
+		var oUl=document.getElementsByTagName("ul");
+		var n=oS.length;
+
+		for(var i=0;i<n;i++){//扫描用户操作
+			oS[i].index=i;
+			oS[i].onclick=function(){
+				for(var j=0;j<n;j++){//关所有
+					oS[j].className="";
+					oUl[j].className="";
+				}
+				console.log(this.index);
+				this.className="on";//开一个
+				oUl[this.index].className="on";
+				//this.index---实现了分类标题oS与oUl
+			}
+		}
+	</script>
+</body>
+</html>
